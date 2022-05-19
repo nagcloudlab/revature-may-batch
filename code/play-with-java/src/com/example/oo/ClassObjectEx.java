@@ -28,8 +28,7 @@ class Employee {
         this.address = address;
     }
 
-    // 3. method(s)  ( functions bound with an object )
-
+    // 3. method(s)  ( function which bound with an object )
     // a. class methods
     static void doTraining() {
         System.out.println(Employee.tnrName + " giving training to all employees");
@@ -41,7 +40,6 @@ class Employee {
         this.salary = salary + 100;
     }
 
-
     @Override
     public String toString() {
         return "Employee{" +
@@ -51,7 +49,6 @@ class Employee {
                 ", address='" + address + '\'' +
                 '}';
     }
-
 
 }
 
