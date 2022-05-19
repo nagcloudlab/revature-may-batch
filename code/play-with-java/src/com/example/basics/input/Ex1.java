@@ -1,4 +1,4 @@
-package com.example.input;
+package com.example.basics.input;
 
 
 import java.util.Scanner;
