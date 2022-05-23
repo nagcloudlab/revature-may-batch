@@ -4,15 +4,15 @@ package com.example.oo;
 // Team-1 : PriceMatrix ( dependency )
 //-------------------------------------------------------
 
-//-----------------------------------
-// interface  => Abstraction of an object
-//-----------------------------------
+//-------------------------------------------
+// Abstraction of an object
+//-------------------------------------------
 interface PriceMatrix {
     public abstract double getPrice(String cartItem); // abstract methods
 }
-//-----------------------------------
-// class => Implementation / Encapsulation of an object
-//-----------------------------------
+//-------------------------------------------
+//Implementation / Encapsulation of an object
+//-------------------------------------------
 // 2 implementation(s)
 class PriceMatrix_v1 implements PriceMatrix {
     public double getPrice(String cartItem) {
@@ -26,8 +26,9 @@ class PriceMatrix_v2 implements PriceMatrix {
     }
 }
 
+
 //-------------------------------------------------------
-// PriceMatrix Factory ( centralize/isolate complex object creation from real code )
+// PriceMatrix Factory ( a class used to centralize/isolate complex-object creation from real-code )
 //-------------------------------------------------------
 class PriceMatrixFactory {
     static PriceMatrix getPriceMatrix(String version) {
@@ -44,11 +45,9 @@ class PriceMatrixFactory {
 //-------------------------------------------------------
 // Team-2 : Billing  ( dependent )
 //-------------------------------------------------------
-
 interface Billing {
     double getTotalPrice(String[] cart);
 }
-
 class BillingImpl implements Billing {
     PriceMatrix priceMatrix;
     BillingImpl() {
@@ -65,8 +64,7 @@ class BillingImpl implements Billing {
     }
 }
 
-
-public class InterfaceAndImplementation {
+public class InterfaceAndImplementation_Ex1 {
     public static void main(String[] args) {
         // init / booting
         Billing billing = new BillingImpl();
@@ -78,6 +76,5 @@ public class InterfaceAndImplementation {
         String[] cart2 = {"123123", "345345", "4564564", "34234234"};
         totalPrice = billing.getTotalPrice(cart2);
         System.out.println(totalPrice);
-
     }
 }
