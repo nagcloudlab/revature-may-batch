@@ -32,7 +32,6 @@ class Camera implements USB {
     }
 }
 
-
 class Laptop {
     public void readExternalDevice(USB usb) {
         usb.read();
@@ -42,7 +41,6 @@ class Laptop {
         usb.write(null);
     }
 }
-
 
 public class InterfaceAndImplementation_Ex2 {
 

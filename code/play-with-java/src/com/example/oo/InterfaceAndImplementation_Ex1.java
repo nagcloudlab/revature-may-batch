@@ -48,6 +48,7 @@ class PriceMatrixFactory {
 interface Billing {
     double getTotalPrice(String[] cart);
 }
+
 class BillingImpl implements Billing {
     PriceMatrix priceMatrix;
     BillingImpl() {
