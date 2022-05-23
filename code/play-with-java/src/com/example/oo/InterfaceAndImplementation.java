@@ -10,13 +10,10 @@ package com.example.oo;
 interface PriceMatrix {
     public abstract double getPrice(String cartItem); // abstract methods
 }
-
-
 //-----------------------------------
-// Implementation  =>  Encapsulation
+// class => Implementation / Encapsulation of an object
 //-----------------------------------
-
-// implementation(s)
+// 2 implementation(s)
 class PriceMatrix_v1 implements PriceMatrix {
     public double getPrice(String cartItem) {
         return 100.00;
@@ -29,9 +26,8 @@ class PriceMatrix_v2 implements PriceMatrix {
     }
 }
 
-
 //-------------------------------------------------------
-// PriceMatrix Factory
+// PriceMatrix Factory ( centralize/isolate complex object creation from real code )
 //-------------------------------------------------------
 class PriceMatrixFactory {
     static PriceMatrix getPriceMatrix(String version) {
@@ -56,7 +52,7 @@ interface Billing {
 class BillingImpl implements Billing {
     PriceMatrix priceMatrix;
     BillingImpl() {
-        this.priceMatrix = PriceMatrixFactory.getPriceMatrix("v2"); // mock
+        this.priceMatrix = PriceMatrixFactory.getPriceMatrix("v2");
     }
     public double getTotalPrice(String[] cart) {
         double total = 0.0;
