@@ -3,7 +3,7 @@ package com.example.oo;
 import java.io.File;
 import java.util.Scanner;
 
-class Employee {
+class Employee1 {
 
     // 1. Variables
     // a. class variables // one copy of data for all objects
@@ -17,11 +17,11 @@ class Employee {
     String address;
 
     // 2. constructor
-    Employee(int id, String name, double salary/* argmunet variable */) {
+    Employee1(int id, String name, double salary/* argmunet variable */) {
         this(id, name, salary, null);
     }
 
-    Employee(int id, String name, double salary, String address) {
+    Employee1(int id, String name, double salary, String address) {
         this.id = id;
         this.name = name;
         this.salary = salary;
@@ -31,7 +31,7 @@ class Employee {
     // 3. method(s)  ( function which bound with an object )
     // a. class methods
     static void doTraining() {
-        System.out.println(Employee.tnrName + " giving training to all employees");
+        System.out.println(Employee1.tnrName + " giving training to all employees");
     }
 
     // b. obj/instance methods
@@ -56,13 +56,13 @@ class Employee {
 public class ClassObjectEx {
     public static void main(String[] args) {
 
-        Employee.tnrName = "Ben";
+        Employee1.tnrName = "Ben";
 
-        Employee e1 = new Employee(101, "Tom", 1000.00);
-        Employee e2 = new Employee(102, "Jerry", 2000.00, "USA");
+        Employee1 e1 = new Employee1(101, "Tom", 1000.00);
+        Employee1 e2 = new Employee1(102, "Jerry", 2000.00, "USA");
 
 
-        Employee.doTraining();
+        Employee1.doTraining();
 
         e1.doLearnAndWork();
         System.out.println(e1.salary);
