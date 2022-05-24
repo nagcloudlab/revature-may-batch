@@ -37,7 +37,6 @@ class Pricematrix_v3 implements PriceMatrix {
     }
 }
 
-
 //----------------------------------------------------------------
 // PriceMatrix Factory
 //----------------------------------------------------------------
@@ -59,10 +58,8 @@ class PriceMatrixFactory {
 //----------------------------------------------------------------
 
 class BillingImpl {
-
     // composition  a.k.a HAS-A relationship
     PriceMatrix priceMatrix = null;
-
     public BillingImpl(String priceMatrixVersion) {
         this.priceMatrix = PriceMatrixFactory.getPriceMatrix(priceMatrixVersion);
     }
@@ -78,6 +75,7 @@ class BillingImpl {
     }
 }
 
+//---------------------------------------------------------------
 
 public class InterfaceAndImplementation_Ex1 {
     public static void main(String[] args) {
@@ -87,7 +85,6 @@ public class InterfaceAndImplementation_Ex1 {
         String[] cart1 = {"1", "2", "3"};
         double totalPrice = billing.getTotalPrice(cart1);
         System.out.println(totalPrice);
-
 
     }
 }
