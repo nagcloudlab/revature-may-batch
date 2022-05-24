@@ -4,7 +4,7 @@ package com.example.oo;
 // how to re-use obj's behavior through inheritance
 
 // Author : Nag
-class LivingThing {
+abstract class LivingThing {
 
     public void eat() {
         System.out.println("LT-eat()");
@@ -14,32 +14,38 @@ class LivingThing {
         System.out.println("LT-sleep()");
     }
 
-    public void work() {
-        System.out.println("LT-work()");
-    }
+    public abstract void work();
 
 }
 
 // Team-A
-class Human extends LivingThing {
+abstract class Human extends LivingThing {
     public void study() {
         System.out.println("Human:study()");
     }
+}
 
-    // overrding
+class MaleHuman extends Human {
     public void work() {
-        System.out.println("Human:work()");
+        System.out.println("Male-Human-work()");
     }
+}
 
-
+class FemaleHuman extends Human {
+    public void work() {
+        System.out.println("FeMale-Human-work()");
+    }
 }
 
 // Team-B
 class Animal extends LivingThing {
+    public void work() {
+        System.out.println("Animal-work()");
+    }
 }
+
 //Team-C
 class Robot extends LivingThing {
-
     public void eat() {
         System.out.println("Robot-eat()");
     }
@@ -69,7 +75,7 @@ class God {
         lt.eat();
         lt.sleep();
         if (lt instanceof Human) {
-            Human human= (Human)lt;
+            Human human = (Human) lt;
             human.study();
         }
         lt.work();
@@ -83,7 +89,8 @@ public class Inheritance_Ex2 {
 
         God god = new God();
 
-        Human human = new Human();
+//        LivingThing livingThing = new LivingThing();
+        Human human = new MaleHuman();
         Animal animal = new Animal();
         Robot robot = new Robot();
 
