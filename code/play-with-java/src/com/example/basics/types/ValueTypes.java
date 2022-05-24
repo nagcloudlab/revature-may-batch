@@ -1,4 +1,4 @@
-package com.example.basics.datatypes;
+package com.example.basics.types;
 
 public class ValueTypes {
     public static void main(String[] args) {

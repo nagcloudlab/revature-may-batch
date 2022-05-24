@@ -1,4 +1,4 @@
-package com.example.basics.typecasting;
+package com.example.basics.casting;
 
 public class ValueTypeCasting {
     public static void main(String[] args) {

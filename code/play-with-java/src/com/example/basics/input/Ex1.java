@@ -10,6 +10,6 @@ public class Ex1 {
         String name=scanner.nextLine();
         System.out.println("hey, can u say your age as well ?");
         int age=scanner.nextInt();
-        System.out.println("hello "+name+" - "+age);
+        System.out.println("hello "+name+" your age is  "+age);
     }
 }

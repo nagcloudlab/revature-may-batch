@@ -1,81 +1,93 @@
 package com.example.oo;
 
-//-------------------------------------------------------
-// Team-1 : PriceMatrix ( dependency )
-//-------------------------------------------------------
 
-//-------------------------------------------
-// Abstraction of an object
-//-------------------------------------------
+//----------------------------------------------------------------
+// team-1 => pricematrix
+//----------------------------------------------------------------
+
 interface PriceMatrix {
-    public abstract double getPrice(String cartItem); // abstract methods
+    double getPrice(String cartItem);
 }
-//-------------------------------------------
-//Implementation / Encapsulation of an object
-//-------------------------------------------
-// 2 implementation(s)
-class PriceMatrix_v1 implements PriceMatrix {
+
+class Pricematrix_v1 implements PriceMatrix {
+
     public double getPrice(String cartItem) {
+        //...
         return 100.00;
+    }
+
+    public void m1() {
+    }
+
+    public void m2() {
     }
 }
 
-class PriceMatrix_v2 implements PriceMatrix {
+class Pricematrix_v2 implements PriceMatrix {
     public double getPrice(String cartItem) {
+        //...
         return 200.00;
     }
 }
 
+class Pricematrix_v3 implements PriceMatrix {
+    public double getPrice(String itemCode) {
+        //..
+        return 300.00;
+    }
+}
 
-//-------------------------------------------------------
-// PriceMatrix Factory ( a class used to centralize/isolate complex-object creation from real-code )
-//-------------------------------------------------------
+
+//----------------------------------------------------------------
+// PriceMatrix Factory
+//----------------------------------------------------------------
+
 class PriceMatrixFactory {
-    static PriceMatrix getPriceMatrix(String version) {
+    public static PriceMatrix getPriceMatrix(String version) {
         if (version.equals("v1")) {
-            return new PriceMatrix_v1();
+            return new Pricematrix_v1();
         }
         if (version.equals("v2")) {
-            return new PriceMatrix_v2();
+            return new Pricematrix_v2();
         }
-        return null;
+        return new Pricematrix_v3();
     }
 }
 
-//-------------------------------------------------------
-// Team-2 : Billing  ( dependent )
-//-------------------------------------------------------
-interface Billing {
-    double getTotalPrice(String[] cart);
-}
+//----------------------------------------------------------------
+// team-2 => Billing
+//----------------------------------------------------------------
 
-class BillingImpl implements Billing {
-    PriceMatrix priceMatrix;
-    BillingImpl() {
-        this.priceMatrix = PriceMatrixFactory.getPriceMatrix("v2");
+class BillingImpl {
+
+    // composition  a.k.a HAS-A relationship
+    PriceMatrix priceMatrix = null;
+
+    public BillingImpl(String priceMatrixVersion) {
+        this.priceMatrix = PriceMatrixFactory.getPriceMatrix(priceMatrixVersion);
     }
+
     public double getTotalPrice(String[] cart) {
-        double total = 0.0;
-        //this.priceMatrix=PriceMatrixFactory.getPriceMatrix();
+        double totalPrice = 0;
+        //PriceMatrix priceMatrix = PriceMatrixFactory.getPriceMatrix("v3"); // Never do
         for (int i = 0; i < cart.length; i++) {
             String cartItem = cart[i];
-            total += priceMatrix.getPrice(cartItem);
+            totalPrice += priceMatrix.getPrice(cartItem);
         }
-        return total;
+        return totalPrice;
     }
 }
+
 
 public class InterfaceAndImplementation_Ex1 {
     public static void main(String[] args) {
-        // init / booting
-        Billing billing = new BillingImpl();
-        // use
-        String[] cart1 = {"123123", "345345", "4564564"};
+
+        BillingImpl billing = new BillingImpl("v3");
+
+        String[] cart1 = {"1", "2", "3"};
         double totalPrice = billing.getTotalPrice(cart1);
         System.out.println(totalPrice);
 
-        String[] cart2 = {"123123", "345345", "4564564", "34234234"};
-        totalPrice = billing.getTotalPrice(cart2);
-        System.out.println(totalPrice);
+
     }
 }
