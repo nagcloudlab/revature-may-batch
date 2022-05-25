@@ -1,6 +1,6 @@
 package com.example.array;
 
-public class Ex1 {
+public class Primitive_Array_Ex {
 
     public static void main(String[] args) {
 

@@ -25,10 +25,8 @@ class C extends B {
     }
 }
 
-public class ConstructorExecutionFlow {
+public class Constructor_Execution_Flow {
     public static void main(String[] args) {
-
         C c = new C(10);
-
     }
 }

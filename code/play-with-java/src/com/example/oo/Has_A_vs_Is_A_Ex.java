@@ -14,9 +14,7 @@ class Person {
 
 public class Has_A_vs_Is_A_Ex {
     public static void main(String[] args) {
-
         Person person = new Person();
         person.mob = new Iphone();
-
     }
 }

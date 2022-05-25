@@ -1,22 +1,17 @@
 package com.example.basics.mini;
 
-
 public class Ex1 {
+    static int staVar;
+    int insVar;
 
-    // variables
-    // a- class
-    // b- obj
-
-    // constructor(s)
-
-    // method(s)
-
-    void m() {
-        // conditional statements
-        // looping statements
-        // invoke other methods
-        System.out.println("hello");
+    public static void main(String[] args) {
+        int localvar;
+        localvar = 10;
+        /*
+            impo-note:
+            Local variable must be intialized before use
+         */
+        System.out.println(localvar);
+        int j = localvar + 1;
     }
-
-
 }

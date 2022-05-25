@@ -4,7 +4,6 @@ package com.example.array;
 public class VarArgs {
 
     public static void main(String[] args) {
-
         int n1 = 12;
         int n2 = 13;
         int n3 = 14;

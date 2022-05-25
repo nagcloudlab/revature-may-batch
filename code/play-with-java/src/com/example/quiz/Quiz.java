@@ -1,4 +1,4 @@
-package com.example.strings;
+package com.example.quiz;
 
 public class Quiz {
 

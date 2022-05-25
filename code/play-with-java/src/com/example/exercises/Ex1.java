@@ -1,8 +1,8 @@
-package com.example.strings;
+package com.example.exercises;
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Ex1 {
 
     public static void main(String[] args) {
 

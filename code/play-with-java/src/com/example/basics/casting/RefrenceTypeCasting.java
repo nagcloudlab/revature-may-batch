@@ -1,4 +1,4 @@
-package com.example.basics.typecasting;
+package com.example.basics.casting;
 
 interface Vehicle {
     int ride(int speed);

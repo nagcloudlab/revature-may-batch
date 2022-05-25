@@ -1,17 +1,33 @@
 package com.example.basics.mini;
 
+
+class MyClass {
+
+    static int staVar = 1;
+    int insVar = 2;
+
+    static void staMethod(MyClass ref) {
+        System.out.println(staVar);
+        MyClass r = new MyClass();
+        System.out.println(r.insVar);
+    }
+
+    void insMethod() {
+        System.out.println(staVar);
+        System.out.println(insVar);
+    }
+
+}
+
 public class Ex2 {
-    static int staVar;
-    int insVar;
 
     public static void main(String[] args) {
-        int localvar;
-        localvar = 10;
-        /*
-            impo-note:
-            Local variable must be intialized before use
-         */
-        System.out.println(localvar);
-        int j = localvar + 1;
+
+        MyClass myIns = new MyClass();
+        myIns.insMethod();
+
+        MyClass.staMethod(myIns);
+
     }
+
 }

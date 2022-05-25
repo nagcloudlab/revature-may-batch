@@ -1,33 +1,41 @@
 package com.example.basics.mini;
 
+class Xyz {
 
-class MyClass {
+    final static int staVar = 100;
 
-    static int staVar = 1;
-    int insVar = 2;
+    final int insVar;
 
-    static void staMethod(MyClass ref) {
-        System.out.println(staVar);
-        MyClass r = new MyClass();
-        System.out.println(r.insVar);
+    public Xyz(int insVar) {
+        this.insVar = insVar;
     }
 
-    void insMethod() {
-        System.out.println(staVar);
-        System.out.println(insVar);
+    public void m() {
+        // local-scope
+        final int localVar = 12;
     }
 
 }
 
-public class Ex3 {
+class Super {
+    final void m() {
+    }
+}
+class Sub extends Super {
+//     void m(){}
+}
 
+class LT{}
+class Hu extends LT{}
+final class Adult extends Hu{}
+//class C extends Adult{}
+
+public class Ex4 {
     public static void main(String[] args) {
 
-        MyClass myIns = new MyClass();
-        myIns.insMethod();
+        final Xyz xyz1 = new Xyz(10);
+        Xyz xyz2 = new Xyz(20);
 
-        MyClass.staMethod(myIns);
 
     }
-
 }
