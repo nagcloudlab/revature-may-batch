@@ -18,10 +18,14 @@ public class Ex2 {
 
         // output
         /*
+
+        calculate total salary of earch department
+
             IT - 3000
             HR - 8000
             SALES - 4000
             XXX - 0.0
+
          */
 
 
