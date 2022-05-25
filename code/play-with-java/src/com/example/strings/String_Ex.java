@@ -1,9 +1,8 @@
 package com.example.strings;
 
 import java.lang.*;
-import java.util.Locale;
 
-public class Ex1 {
+public class String_Ex {
 
     public static void main(String[] args) {
 

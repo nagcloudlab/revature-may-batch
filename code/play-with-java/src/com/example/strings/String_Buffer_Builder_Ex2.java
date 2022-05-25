@@ -1,6 +1,6 @@
 package com.example.strings;
 
-public class Ex2 {
+public class String_Buffer_Builder_Ex2 {
 
     public static void main(String[] args) {
 

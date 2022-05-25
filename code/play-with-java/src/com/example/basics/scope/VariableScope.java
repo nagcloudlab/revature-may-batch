@@ -1,8 +1,8 @@
-package com.example.bytes;
+package com.example.basics.scope;
 
 class Person {
 
-    static int count;
+    static int count; // class scope
 
     String name;
 //    int count = 0; // instance / obj scope
@@ -19,7 +19,7 @@ class Person {
 }
 
 
-public class DebugEx {
+public class VariableScope {
     public static void main(String[] args) {
 
         Person person1 = new Person("Tom");
@@ -27,8 +27,11 @@ public class DebugEx {
 
         person1.sayHello();
         person1.sayHello();
-
         person2.sayHello();
 
+        person1 = null; // we lost obj's reference , obj become garbage
+
+
+        System.out.println(Person.count);
     }
 }
