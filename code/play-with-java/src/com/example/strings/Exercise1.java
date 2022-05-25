@@ -11,13 +11,10 @@ public class Exercise1 {
         String filePath = scanner.nextLine();
         /*
             c:/dir1/cat1.jpg
-            c:/dir1//dir2/cat2.jpg
+            c:/dir1/dir2/cat2.jpg
          */
-
         String fileName = null;
-
-        //TODO
-
+        fileName=filePath.substring(filePath.lastIndexOf("/")+1);
         System.out.println(fileName);
 
 
