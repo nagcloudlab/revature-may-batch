@@ -1,8 +1,5 @@
 package com.example.oo;
 
-import java.io.File;
-import java.util.Scanner;
-
 class Employee1 {
 
     // 1. Variables
@@ -53,7 +50,7 @@ class Employee1 {
 }
 
 
-public class ClassObjectEx {
+public class ClassObject {
     public static void main(String[] args) {
 
         Employee1.tnrName = "Ben";

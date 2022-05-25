@@ -2,7 +2,7 @@ package com.example.string;
 
 import java.lang.*;
 
-public class String_Ex {
+public class Intro {
 
     public static void main(String[] args) {
 

@@ -20,7 +20,7 @@ class Product {
     }
 }
 
-public class Reference_Array_Ex {
+public class ReferenceArray {
 
     public static void main(String[] args) {
 

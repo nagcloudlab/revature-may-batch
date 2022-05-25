@@ -5,7 +5,6 @@ public class Ex2 {
     public static void main(String[] args) {
         /*
             format => name,dep,salary
-            condition => we dont know how many departments is there in advance
          */
         // input
         String[] csvReport = {
@@ -24,10 +23,20 @@ public class Ex2 {
             IT - 3000
             HR - 8000
             SALES - 4000
-            XXX - 0.0
 
          */
 
+        String[][] summary = new String[3][2];
+
+        for (int i = 0; i < csvReport.length; i++) {
+            String csvRecord = csvReport[i];
+            String[] tokens = csvRecord.split(",");
+            String depName = tokens[1];
+            double salary = Double.parseDouble(tokens[2]);
+
+            //..
+
+        }
 
 
     }

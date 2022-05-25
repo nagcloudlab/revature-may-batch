@@ -1,6 +1,6 @@
 package com.example.string;
 
-public class String_Buffer_Ex {
+public class MutableString {
 
     public static void main(String[] args) {
 

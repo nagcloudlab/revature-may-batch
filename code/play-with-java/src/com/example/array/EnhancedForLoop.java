@@ -1,6 +1,6 @@
 package com.example.array;
 
-public class Enhanced_For_Loop {
+public class EnhancedForLoop {
 
     public static void main(String[] args) {
 

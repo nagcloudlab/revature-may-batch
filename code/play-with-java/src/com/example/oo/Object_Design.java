@@ -21,7 +21,7 @@ class Iphonee extends AppleSmartDevice implements AirDrop{
     }
 }
 
-public class Good_Object_Design {
+public class Object_Design {
 
     public static void main(String[] args) {
 
