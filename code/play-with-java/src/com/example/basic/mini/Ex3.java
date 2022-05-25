@@ -30,7 +30,7 @@ class Hu extends LT{}
 final class Adult extends Hu{}
 //class C extends Adult{}
 
-public class Ex4 {
+public class Ex3 {
     public static void main(String[] args) {
 
         final Xyz xyz1 = new Xyz(10);
