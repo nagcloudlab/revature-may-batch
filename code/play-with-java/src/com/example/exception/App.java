@@ -14,22 +14,19 @@ class AccountBalanceException extends Exception {
 }
 
 //---------------------------------------------------------------
-// Team-1 : transfer-service module   ( third-party )
+// Team-1 : transfer-service module
 //---------------------------------------------------------------
 
 class TransferService {
-    public long transfer(double amount, String sourceAccNumber, String destinationAccNumber) throws AccountBalanceException, AccountNotFoundException {
+    public long transfer(double amount, String sourceAccNumber, String destinationAccNumber) throws AccountNotFoundException, AccountBalanceException {
         // load source account details
-
         if (sourceAccNumber.equals("13"))
             throw new AccountNotFoundException("not found ");
-
 
         double sourceAccBalance = 1000.00;
         // check balance in source
         if (sourceAccBalance < amount)
             throw new AccountBalanceException("no enough balance - " + sourceAccBalance);
-
         // debit
         // credit
         // update accounts
@@ -38,7 +35,7 @@ class TransferService {
 }
 
 //---------------------------------------------------------------
-// Team-2 : ticket-booking module
+// Team-1 : ticket-booking module
 //---------------------------------------------------------------
 
 class TicketBooking {
@@ -52,10 +49,10 @@ class TicketBooking {
             System.out.println("ticket confirmed..");
         } catch (AccountNotFoundException e) {
             //...
-            System.out.println("Ex- " + e.getMessage());
+//            System.out.println("Ex- " + e.getMessage());
         } catch (AccountBalanceException e) {
 //            // step-3 : if transfer failed relase ticket
-            System.out.println("Ex- " + e.getMessage());
+//            System.out.println("Ex- " + e.getMessage());
 ////            e.printStackTrace();
         }
     }
@@ -67,7 +64,6 @@ public class App {
 //
         TicketBooking ticketBooking = new TicketBooking();
         ticketBooking.bookTicket(12, 10000.00, "22112211");
-
 
     }
 }
