@@ -1,10 +1,9 @@
 package com.example.exception;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadLunchMenu {
+public class ReadFile {
 
     public static void main(String[] args) {
 
