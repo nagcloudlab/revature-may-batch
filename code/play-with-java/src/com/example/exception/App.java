@@ -1,6 +1,12 @@
 package com.example.exception;
 
 // checked
+class AccountNotFoundException extends Exception {
+    public AccountNotFoundException(String message) {
+        super(message);
+    }
+}
+
 class AccountBalanceException extends Exception {
     public AccountBalanceException(String message) {
         super(message);
@@ -12,13 +18,18 @@ class AccountBalanceException extends Exception {
 //---------------------------------------------------------------
 
 class TransferService {
-    public long transfer(double amount, String sourceAccNumber, String destinationAccNumber) throws AccountBalanceException {
+    public long transfer(double amount, String sourceAccNumber, String destinationAccNumber) throws AccountBalanceException, AccountNotFoundException {
         // load source account details
+
+        if (sourceAccNumber.equals("13"))
+            throw new AccountNotFoundException("not found ");
+
+
         double sourceAccBalance = 1000.00;
         // check balance in source
-        if (sourceAccBalance < amount) {
+        if (sourceAccBalance < amount)
             throw new AccountBalanceException("no enough balance - " + sourceAccBalance);
-        }
+
         // debit
         // credit
         // update accounts
@@ -39,6 +50,9 @@ class TicketBooking {
             transferService.transfer(ticketAmount, sourceAccNumber, "1111222");
             // step-2 : if transfer success confirm ticket
             System.out.println("ticket confirmed..");
+        } catch (AccountNotFoundException e) {
+            //...
+            System.out.println("Ex- " + e.getMessage());
         } catch (AccountBalanceException e) {
 //            // step-3 : if transfer failed relase ticket
             System.out.println("Ex- " + e.getMessage());
