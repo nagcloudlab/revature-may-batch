@@ -54,6 +54,10 @@ public class LinkedList<E> {
         size++;
     }
 
+    public void add(int index,E e){
+        // TODO
+    }
+
     public E get(int index) {
         if (index > size - 1)
             throw new IndexOutOfBoundsException(index);
