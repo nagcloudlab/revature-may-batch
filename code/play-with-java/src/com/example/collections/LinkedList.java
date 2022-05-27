@@ -1,6 +1,8 @@
 package com.example.collections;
 
 
+import java.util.Iterator;
+
 class Node<E> {
     private E data;
     private Node<E> next;
@@ -31,7 +33,7 @@ class Node<E> {
     }
 }
 
-public class LinkedList<E> {
+public class LinkedList<E> implements Iterable<E> {
 
     private Node<E> head = null;
     private Node<E> last = null;
@@ -94,5 +96,19 @@ public class LinkedList<E> {
         return e;
     }
 
-
+    public Iterator<E> iterator() {
+        return new Iterator<E>() {
+            Node<E> current = head;
+            public boolean hasNext() {
+                if (current != null)
+                    return true;
+                else return false;
+            }
+            public E next() {
+                E e = current.getData();
+                current = current.getNext();
+                return e;
+            }
+        };
+    }
 }

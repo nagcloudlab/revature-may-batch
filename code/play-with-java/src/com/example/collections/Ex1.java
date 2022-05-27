@@ -1,5 +1,7 @@
 package com.example.collections;
 
+import java.util.ArrayList;
+
 public class Ex1 {
 
     public static void main(String[] args) {
@@ -13,6 +15,10 @@ public class Ex1 {
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i));
         }
+
+        String[] stringArray=new String[10];
+        ArrayList<String> arrayList=new ArrayList<>(1000);
+        arrayList.add("s1");
 
 
 
