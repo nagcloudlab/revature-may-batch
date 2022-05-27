@@ -38,21 +38,38 @@ public class LinkedList<E> {
 
     private int size = 0;
 
+    public int size() {
+        return this.size;
+    }
+
     public void add(E ele) {
         Node<E> newNode = new Node<>(ele);
         if (head == null) {
             head = newNode;
             last = newNode;
-            size++;
         } else {
             last.setNext(newNode);
             last = newNode;
-            size++;
         }
+        size++;
     }
 
-    public int size() {
-        return this.size;
+    public E get(int index) {
+        if (index > size - 1)
+            throw new IndexOutOfBoundsException(index);
+        if (index == 0)
+            return head.getData();
+        Node<E> t = head.getNext();
+        int i = 1;
+        E e = null;
+        while (i <= index) {
+            if (t != null) {
+                e = t.getData();
+                t = t.getNext();
+            }
+            i++;
+        }
+        return e;
     }
 
 
