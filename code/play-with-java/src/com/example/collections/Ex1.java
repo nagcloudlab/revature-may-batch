@@ -8,16 +8,15 @@ public class Ex1 {
         students.add("Alberto");
         students.add("Andrew");
         students.add("Benny");
-        students.add(2, "Ben");
+        students.add(2, "Nag");
 
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i));
         }
 
-        // Alb
-//        And
-// ben
-//        Benny
+
+
+
     }
 
 }

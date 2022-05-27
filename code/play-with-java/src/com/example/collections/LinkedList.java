@@ -54,8 +54,26 @@ public class LinkedList<E> {
         size++;
     }
 
-    public void add(int index,E e){
-        // TODO
+    public void add(int index, E e) {
+        if (index > size - 1)
+            throw new IndexOutOfBoundsException(index);
+        Node<E> newNode = new Node<>(e);
+        if (index == 0) {
+            newNode.setNext(head);
+            head = newNode;
+            size++;
+            return;
+        }
+        int i = 0;
+        Node<E> current = head;
+        while (i < index - 1) {
+            current = current.getNext();
+            i++;
+        }
+        newNode.setNext(current.getNext());
+        current.setNext(newNode);
+        size++;
+
     }
 
     public E get(int index) {
