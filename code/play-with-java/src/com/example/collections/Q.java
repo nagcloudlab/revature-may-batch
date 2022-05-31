@@ -1,5 +1,7 @@
 package com.example.collections;
 
+import com.example.collections.custom.LinkedList;
+
 import java.util.ArrayList;
 
 public class Q {
