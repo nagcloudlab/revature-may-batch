@@ -45,7 +45,10 @@ public class Ex1 {
 //            }
 //        }
 
-        menu2.removeIf(e -> e.equals("veg"));
+        //        2. Declarative
+        menu2.removeIf(item -> {
+            return item.equals("veg");
+        });
 
         System.out.println(menu1);
         System.out.println(menu2);
