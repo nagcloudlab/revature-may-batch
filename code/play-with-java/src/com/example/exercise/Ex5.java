@@ -15,6 +15,23 @@ public class Ex5 {
 
         // replacce all 'nevg; item with '*'
 
+        //way-1
+//        for(int i=0;i<menu.size();i++) {
+//            if(menu.get(i).equals("nveg")){
+//                menu.set(i,"*");
+//            }
+//        }
+//
+        //way-2
+        menu.replaceAll(item -> {
+            if (item.equals("nveg"))
+                return "*";
+            else
+                return item;
+        });
+
+        System.out.println(menu);
+
     }
 
 }
