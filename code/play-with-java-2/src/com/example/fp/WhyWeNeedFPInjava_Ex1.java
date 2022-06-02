@@ -1,4 +1,4 @@
-package com.example;
+package com.example.fp;
 
 import com.example.model.Apple;
 

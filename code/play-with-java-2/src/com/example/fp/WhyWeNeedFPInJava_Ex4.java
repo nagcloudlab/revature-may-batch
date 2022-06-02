@@ -1,4 +1,4 @@
-package com.example;
+package com.example.fp;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,8 +16,7 @@ public class WhyWeNeedFPInJava_Ex4 {
         family.add("riya");
         family.add("diya");
 
-        // ?
-
+        Collections.sort(family,(o1,o2) -> o2.compareTo(o2));
 
         System.out.println(family);
 
