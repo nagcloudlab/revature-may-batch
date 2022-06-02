@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="streams">
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Mapping.java" afterDir="false" />
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="stream examples">
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Finding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/NumericStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppt/git_real_slides_1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppt/git_real_slides_2.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
       <recent name="C:\Users\Nag\training\revature-training\revature-may-batch\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mapping">
+  <component name="RunManager" selected="Application.NumericStreams">
     <configuration name="BuildingStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.stream.BuildingStreams" />
       <module name="play-with-java-2" />
@@ -93,21 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HowToWorkWithStreamAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.HowToWorkWithStreamAPI" />
-      <module name="play-with-java-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LazyStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.LazyStream" />
+    <configuration name="Finding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.Finding" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +122,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NumericStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.NumericStreams" />
+      <module name="play-with-java-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumericStreams" />
+        <item itemvalue="Application.Finding" />
         <item itemvalue="Application.Mapping" />
         <item itemvalue="Application.Filtering" />
         <item itemvalue="Application.BuildingStreams" />
-        <item itemvalue="Application.LazyStream" />
-        <item itemvalue="Application.HowToWorkWithStreamAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +174,7 @@
       <workItem from="1654092208345" duration="18084000" />
       <workItem from="1654116588336" duration="100000" />
       <workItem from="1654178826318" duration="9710000" />
-      <workItem from="1654193355657" duration="5226000" />
+      <workItem from="1654193355657" duration="8807000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -411,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654197208789</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="stream examples">
+      <created>1654198728416</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1654198728416</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +463,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="intro streams api" />
     <MESSAGE value="streams" />
-    <option name="LAST_COMMIT_MESSAGE" value="streams" />
+    <MESSAGE value="stream examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="stream examples" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
