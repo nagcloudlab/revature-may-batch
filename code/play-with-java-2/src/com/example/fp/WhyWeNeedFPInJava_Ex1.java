@@ -13,7 +13,7 @@ class GreenApplePredicate implements Predicate<Apple> {
     }
 }
 
-public class WhyWeNeedFPInjava_Ex1 {
+public class WhyWeNeedFPInJava_Ex1 {
     public static void main(String[] args) {
 
         List<Apple> inventory = Arrays.asList(new Apple(80, "green"),

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="get lof cal dish names in asc">
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInjava_Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,20 @@
       <recent name="C:\Users\Nag\training\revature-training\revature-may-batch\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WhyWeNeedFPInJava_Ex4">
+  <component name="RunManager" selected="Application.Ex1">
+    <configuration name="Ex1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Ex1" />
+      <module name="play-with-java-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HowToCreateFunctionInJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.fp.HowToCreateFunctionInJava" />
       <module name="play-with-java-2" />
@@ -81,19 +95,6 @@
     </configuration>
     <configuration name="MethodReference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.fp.MethodReference" />
-      <module name="play-with-java-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.fp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WhyWeNeedFPInJava_Ex2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.fp.WhyWeNeedFPInJava_Ex2" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
@@ -133,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex1" />
         <item itemvalue="Application.WhyWeNeedFPInJava_Ex4" />
         <item itemvalue="Application.MethodReference" />
         <item itemvalue="Application.HowToCreateFunctionInJava" />
         <item itemvalue="Application.WhyWeNeedFPInJava_Ex3" />
-        <item itemvalue="Application.WhyWeNeedFPInJava_Ex2" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +170,7 @@
       <workItem from="1654061812309" duration="7000" />
       <workItem from="1654092208345" duration="18084000" />
       <workItem from="1654116588336" duration="100000" />
-      <workItem from="1654178826318" duration="7983000" />
+      <workItem from="1654178826318" duration="9615000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -388,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654186417608</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix">
+      <created>1654187552222</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654187552222</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +417,6 @@
     <MESSAGE value="class &amp; object intro" />
     <MESSAGE value="access specfiers" />
     <MESSAGE value="exercise-2" />
-    <MESSAGE value="fix" />
     <MESSAGE value="Ex2 - partial solution" />
     <MESSAGE value="Ex2 - solution" />
     <MESSAGE value="Exception intro" />
@@ -428,7 +435,8 @@
     <MESSAGE value="why we need FP in java?" />
     <MESSAGE value="FP in java" />
     <MESSAGE value="get lof cal dish names in asc" />
-    <option name="LAST_COMMIT_MESSAGE" value="get lof cal dish names in asc" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
