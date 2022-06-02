@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="intro streams api">
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/BuildingStreams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/External_vs_Internal_Iteration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/HowToWorkWithStreamAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/LazyStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="streams">
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Mapping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +66,9 @@
       <recent name="C:\Users\Nag\training\revature-training\revature-may-batch\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Filtering">
+  <component name="RunManager" selected="Application.Mapping">
     <configuration name="BuildingStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.stream.BuildingStreams" />
-      <module name="play-with-java-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="External_vs_Internal_Iteration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.External_vs_Internal_Iteration" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
@@ -137,13 +119,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Mapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.Mapping" />
+      <module name="play-with-java-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Mapping" />
         <item itemvalue="Application.Filtering" />
         <item itemvalue="Application.BuildingStreams" />
         <item itemvalue="Application.LazyStream" />
         <item itemvalue="Application.HowToWorkWithStreamAPI" />
-        <item itemvalue="Application.External_vs_Internal_Iteration" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +171,7 @@
       <workItem from="1654092208345" duration="18084000" />
       <workItem from="1654116588336" duration="100000" />
       <workItem from="1654178826318" duration="9710000" />
-      <workItem from="1654193355657" duration="3705000" />
+      <workItem from="1654193355657" duration="5226000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -409,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654189621675</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="streams">
+      <created>1654197208789</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1654197208789</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +452,8 @@
     <MESSAGE value="get lof cal dish names in asc" />
     <MESSAGE value="fix" />
     <MESSAGE value="intro streams api" />
-    <option name="LAST_COMMIT_MESSAGE" value="intro streams api" />
+    <MESSAGE value="streams" />
+    <option name="LAST_COMMIT_MESSAGE" value="streams" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
