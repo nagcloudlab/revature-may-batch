@@ -8,10 +8,9 @@ public class Ex1 {
 
     public static void main(String[] args) {
 
-
         List<Dish> menu=Dish.menu;
 
-        // getLowCaloric dish names asc   ( > 400 )
+        // getLowCaloric ( > 400 ) dishes  names asc
 
     }
 
