@@ -1,4 +1,4 @@
-package com.example;
+package com.example.stream;
 
 import com.example.model.Dish;
 

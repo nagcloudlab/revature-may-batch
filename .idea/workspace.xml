@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="fix">
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="intro streams api">
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/BuildingStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/External_vs_Internal_Iteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Filtering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/HowToWorkWithStreamAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/LazyStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Ex1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +71,13 @@
       <recent name="C:\Users\Nag\training\revature-training\revature-may-batch\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ex1">
-    <configuration name="Ex1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Ex1" />
+  <component name="RunManager" selected="Application.Filtering">
+    <configuration name="BuildingStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.BuildingStreams" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.*" />
+          <option name="PATTERN" value="com.example.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,12 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HowToCreateFunctionInJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.fp.HowToCreateFunctionInJava" />
+    <configuration name="External_vs_Internal_Iteration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.External_vs_Internal_Iteration" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.fp.*" />
+          <option name="PATTERN" value="com.example.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MethodReference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.fp.MethodReference" />
+    <configuration name="Filtering" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.Filtering" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.fp.*" />
+          <option name="PATTERN" value="com.example.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WhyWeNeedFPInJava_Ex3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.fp.WhyWeNeedFPInJava_Ex3" />
+    <configuration name="HowToWorkWithStreamAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.HowToWorkWithStreamAPI" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.fp.*" />
+          <option name="PATTERN" value="com.example.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +124,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WhyWeNeedFPInJava_Ex4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.fp.WhyWeNeedFPInJava_Ex4" />
+    <configuration name="LazyStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.stream.LazyStream" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.fp.*" />
+          <option name="PATTERN" value="com.example.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex1" />
-        <item itemvalue="Application.WhyWeNeedFPInJava_Ex4" />
-        <item itemvalue="Application.MethodReference" />
-        <item itemvalue="Application.HowToCreateFunctionInJava" />
-        <item itemvalue="Application.WhyWeNeedFPInJava_Ex3" />
+        <item itemvalue="Application.Filtering" />
+        <item itemvalue="Application.BuildingStreams" />
+        <item itemvalue="Application.LazyStream" />
+        <item itemvalue="Application.HowToWorkWithStreamAPI" />
+        <item itemvalue="Application.External_vs_Internal_Iteration" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +175,8 @@
       <workItem from="1654061812309" duration="7000" />
       <workItem from="1654092208345" duration="18084000" />
       <workItem from="1654116588336" duration="100000" />
-      <workItem from="1654178826318" duration="9615000" />
+      <workItem from="1654178826318" duration="9710000" />
+      <workItem from="1654193355657" duration="3705000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -396,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654187552222</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="intro streams api">
+      <created>1654189621675</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1654189621675</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +449,8 @@
     <MESSAGE value="FP in java" />
     <MESSAGE value="get lof cal dish names in asc" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="intro streams api" />
+    <option name="LAST_COMMIT_MESSAGE" value="intro streams api" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
