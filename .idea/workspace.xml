@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="stream examples">
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/Finding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/NumericStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="streams examples">
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp2/Ex1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/model/Trader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppt/git_real_slides_1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppt/git_real_slides_2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex3.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex4.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +177,8 @@
       <workItem from="1654092208345" duration="18084000" />
       <workItem from="1654116588336" duration="100000" />
       <workItem from="1654178826318" duration="9710000" />
-      <workItem from="1654193355657" duration="8807000" />
+      <workItem from="1654193355657" duration="8904000" />
+      <workItem from="1654265251953" duration="806000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -421,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654198728416</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="streams examples">
+      <created>1654205858042</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1654205858042</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="class &amp; object intro" />
     <MESSAGE value="access specfiers" />
     <MESSAGE value="exercise-2" />
     <MESSAGE value="Ex2 - partial solution" />
@@ -464,7 +474,8 @@
     <MESSAGE value="intro streams api" />
     <MESSAGE value="streams" />
     <MESSAGE value="stream examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="stream examples" />
+    <MESSAGE value="streams examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="streams examples" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class WhyWeNeedFPInJava_Ex2 {
+public class FPInJava_Ex2 {
 
     public static void main(String[] args) {
 

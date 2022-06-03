@@ -13,7 +13,7 @@ class GreenApplePredicate implements Predicate<Apple> {
     }
 }
 
-public class WhyWeNeedFPInJava_Ex1 {
+public class FPInJava_Ex1 {
     public static void main(String[] args) {
 
         List<Apple> inventory = Arrays.asList(new Apple(80, "green"),
@@ -44,6 +44,7 @@ public class WhyWeNeedFPInJava_Ex1 {
 
         // C. Function a.k.a Lambda Expression
         Predicate<Apple> greenApplePredicate2 = (apple) -> "green".equals(apple.getColor());
+        greenApples=filterApples(inventory,greenApplePredicate2);
         for (Apple apple : greenApples) {
             System.out.println(apple);
         }
@@ -54,7 +55,6 @@ public class WhyWeNeedFPInJava_Ex1 {
          */
 
     }
-
     public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {

@@ -2,10 +2,9 @@ package com.example.fp;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-public class WhyWeNeedFPInJava_Ex4 {
+public class FPInJava_Ex4 {
 
     public static void main(String[] args) {
 

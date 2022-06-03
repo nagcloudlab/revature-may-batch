@@ -3,7 +3,7 @@ package com.example.fp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WhyWeNeedFPInJava_Ex3 {
+public class FPInJava_Ex3 {
 
     public static void main(String[] args) {
 
