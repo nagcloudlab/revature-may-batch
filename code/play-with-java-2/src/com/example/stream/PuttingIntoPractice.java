@@ -3,9 +3,7 @@ package com.example.stream;
 import com.example.model.Trader;
 import com.example.model.Transaction;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class PuttingIntoPractice {
@@ -40,7 +38,6 @@ public class PuttingIntoPractice {
         System.out.println("-".repeat(50));
 
         // Query 2: What are all the unique cities where the traders work?
-
         List<String> cities =
                 transactions
                         .stream()
@@ -49,6 +46,7 @@ public class PuttingIntoPractice {
                         .collect(Collectors.toList());
         System.out.println(cities);
         System.out.println("-".repeat(50));
+
         // Query 3: Find all traders from Cambridge and sort them by name.
         List<Trader> traders =
                 transactions
@@ -58,14 +56,12 @@ public class PuttingIntoPractice {
                         .distinct()
                         .sorted(Comparator.comparing(Trader::getName))
                         .collect(Collectors.toList());
-
         traders
                 .forEach(System.out::println);
 
         System.out.println("-".repeat(50));
 
         // Query 4: Return a string of all traders’ names sorted alphabetically.
-
         List<String> trNames =
                 transactions
                         .stream()
@@ -79,7 +75,6 @@ public class PuttingIntoPractice {
         System.out.println("-".repeat(50));
 
         // Query 5: Are there any trader based in Milan?
-
         boolean milanBased =
                 transactions
                         .stream()
@@ -88,7 +83,6 @@ public class PuttingIntoPractice {
         System.out.println("-".repeat(50));
 
         // Query 6: Update all transactions so that the traders from Milan are set to Cambridge.
-
         transactions
                 .stream()
                 .map(Transaction::getTrader)
@@ -100,14 +94,15 @@ public class PuttingIntoPractice {
         System.out.println("-".repeat(50));
 
         // Query 7: What's the highest value in all the transactions?
-
-        int highestValue =
+        OptionalInt optional=
                 transactions
                         .stream()
                         .mapToInt(Transaction::getValue)
-                        .max().getAsInt();
+                        .max();
 
-        System.out.println(highestValue);
+        if(optional.isPresent()){
+            System.out.println(optional.getAsInt());
+        }
 
     }
 
