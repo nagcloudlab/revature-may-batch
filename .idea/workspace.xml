@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="streams examples">
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp2/Ex1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/model/Trader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/model/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" afterDir="false" />
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="stream practice-1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex3.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/WhyWeNeedFPInJava_Ex4.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/fp/FPInJava_Ex4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +171,7 @@
       <workItem from="1654116588336" duration="100000" />
       <workItem from="1654178826318" duration="9710000" />
       <workItem from="1654193355657" duration="8904000" />
-      <workItem from="1654265251953" duration="806000" />
+      <workItem from="1654265251953" duration="892000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -432,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654205858042</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="stream practice-1">
+      <created>1654266084550</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1654266084550</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="access specfiers" />
     <MESSAGE value="exercise-2" />
     <MESSAGE value="Ex2 - partial solution" />
     <MESSAGE value="Ex2 - solution" />
@@ -475,7 +474,8 @@
     <MESSAGE value="streams" />
     <MESSAGE value="stream examples" />
     <MESSAGE value="streams examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="streams examples" />
+    <MESSAGE value="stream practice-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="stream practice-1" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -26,6 +26,18 @@ public class PuttingIntoPractice {
 
         // Query 1: Find all transactions from year 2011 and sort them by value (small to high).
 
+        // Query 2: What are all the unique cities where the traders work?
+
+        // Query 3: Find all traders from Cambridge and sort them by name.
+
+        // Query 4: Return a string of all traders’ names sorted alphabetically.
+
+        // Query 5: Are there any trader based in Milan?
+
+        // Query 6: Update all transactions so that the traders from Milan are set to Cambridge.
+
+        // Query 7: What's the highest value in all the transactions?
+
 
 
     }
