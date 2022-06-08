@@ -9,10 +9,14 @@ import com.example.repository.InMemoryAccountRepository;
 import com.example.repository.JdbcAccountRepository;
 import org.apache.log4j.Logger;
 
-public class TransferServiceImpl {
+// Polymorphic
+
+// dependent
+public class TransferServiceImpl implements TransferService {
 
     private static final Logger LOGGER = Logger.getLogger("mts");
 
+    // dependency   ( HAS-A )
     private AccountRepository accountRepository;
 
     // dependency injection
@@ -21,6 +25,7 @@ public class TransferServiceImpl {
         LOGGER.info("TransferService instance created...");
     }
 
+    @Override
     public void transfer(double amount, String sourceAccNumber, String targetAccNumber) {
 
 //        System.out.println("transfer initiated.."); // IO , millis

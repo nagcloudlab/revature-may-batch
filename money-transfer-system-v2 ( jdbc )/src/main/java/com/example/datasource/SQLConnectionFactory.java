@@ -1,6 +1,5 @@
 package com.example.datasource;
 
-import org.postgresql.Driver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,8 +29,9 @@ public class SQLConnectionFactory {
     static {
         // step-1: register jdbc-driver
         try {
-            DriverManager.registerDriver(new Driver());
-        } catch (SQLException e) {
+//          DriverManager.registerDriver("");
+            Class.forName(properties.getProperty("datasource.driver-class-name"));
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

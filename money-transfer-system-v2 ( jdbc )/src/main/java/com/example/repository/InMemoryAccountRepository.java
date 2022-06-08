@@ -9,7 +9,7 @@ import java.util.Optional;
 
 // Account account data-accessing code
 
-public class InMemoryAccountRepository {
+public class InMemoryAccountRepository implements AccountRepository {
 
     private static final Logger LOGGER = Logger.getLogger("mts");
 

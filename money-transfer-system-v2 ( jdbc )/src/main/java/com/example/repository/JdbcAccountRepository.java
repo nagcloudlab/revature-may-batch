@@ -1,5 +1,6 @@
 package com.example.repository;
 
+import com.example.datasource.SQLConnectionFactory;
 import com.example.model.Account;
 import org.apache.log4j.Logger;
 import org.postgresql.Driver;
@@ -7,20 +8,14 @@ import org.postgresql.Driver;
 import java.sql.*;
 import java.util.Optional;
 
-public class JdbcAccountRepository {
+public class JdbcAccountRepository implements AccountRepository {
 
     private static final Logger LOGGER = Logger.getLogger("mts");
 
     public Optional<Account> loadAccount(String number) {
         Connection connection = null;
         try {
-            // step-1: register jdbc-driver
-            DriverManager.registerDriver(new Driver());
-            // step-2: create db-connection
-            String url = "jdbc:postgresql://localhost:5432/bankdb";
-            String username = "postgres";
-            String password = "postgres";
-            connection = DriverManager.getConnection(url, username, password);
+            connection = SQLConnectionFactory.getConnection();
             // step-3: jdbc-statement with SQL query
             String sql = "select * from accounts where acc_number=?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -50,13 +45,7 @@ public class JdbcAccountRepository {
     public void updateAccount(Account account) {
         Connection connection = null;
         try {
-            // step-1: register jdbc-driver
-            DriverManager.registerDriver(new Driver());
-            // step-2: create db-connection
-            String url = "jdbc:postgresql://localhost:5432/bankdb";
-            String username = "postgres";
-            String password = "postgres";
-            connection = DriverManager.getConnection(url, username, password);
+            connection = SQLConnectionFactory.getConnection();
             // step-3: jdbc-statement with SQL query
             String sql = "update accounts set acc_balance=? where acc_number=?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -79,6 +68,5 @@ public class JdbcAccountRepository {
             }
         }
     }
-
 
 }
