@@ -12,6 +12,7 @@ import com.example.service.TransferServiceImpl;
 import org.apache.log4j.Logger;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Application {
 
@@ -31,20 +32,34 @@ public class Application {
         //-----------------------------------------------------------------------------
         // use
         //-----------------------------------------------------------------------------
-//        try {
-//            transferService.transfer(100.00, "1", "11");
-//        } catch (AccountNotFoundException anfe) {
-//            LOG.error("Transfer failed - " + anfe.getMessage());
-//        }
-//        System.out.println("-".repeat(50));
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter amount");
+        double amount = scanner.nextDouble();
+
+        scanner.nextLine(); // ill explain later
+
+        System.out.println("Enter source account");
+        String sourceAccNumber = scanner.nextLine();
+
+        System.out.println("Enter target account");
+        String targetAccNumber = scanner.nextLine();
+
+        try {
+            transferService.transfer(amount, sourceAccNumber, targetAccNumber);
+        } catch (AccountNotFoundException anfe) {
+            LOG.error("Transfer failed - " + anfe.getMessage());
+        }
+        System.out.println("-".repeat(50));
         //---------------------------------------------------------------------------------
-
-        List<Transaction> transactionList = jdbcTransactionRepository.findAll();
-
-        transactionList
-                .stream()
-                .filter(txn -> txn.getType() == TxnType.CREDIT)
-                .forEach(System.out::println);
+//
+//        List<Transaction> transactionList = jdbcTransactionRepository.findAll();
+//
+//        transactionList
+//                .stream()
+//                .filter(txn -> txn.getType() == TxnType.CREDIT)
+//                .forEach(System.out::println);
 
         //----------------------------------------------------------------------------------
 
