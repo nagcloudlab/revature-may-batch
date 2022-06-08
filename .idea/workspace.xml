@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="stream practice-1">
+    <list default="true" id="ce50cbca-94cc-48bf-8a32-04347d19f4e6" name="Changes" comment="maven &amp; log4j intro">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/play-with-java-2/src/com/example/stream/PuttingIntoPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Money-Transfer-system-v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Money-Transfer-system-v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/EnhancedForLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/EnhancedForLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/PrimitiveArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/PrimitiveArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/ReferenceArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/play-with-java-1/src/com/example/array/ReferenceArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play-with-java-1/src/com/example/exercise/Ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/play-with-java-1/src/com/example/exercise/Ex2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play-with-java-1/src/com/example/exercise/Ex3.java" beforeDir="false" afterPath="$PROJECT_DIR$/play-with-java-1/src/com/example/exercise/Ex3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +49,11 @@
   <component name="ProjectId" id="29OF9Lkys38zcYwqXx0XG1W6jpi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -54,24 +62,31 @@
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Money-Transfer-system-v1/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nag\training\revature-may-batch\Money-Transfer-system-v1\src\main\java" />
+      <recent name="C:\Users\Nag\training\revature-may-batch\code\play-with-java-1\src" />
+      <recent name="C:\Users\Nag\training\revature-may-batch\code\play-with-java-2\src\com\example\optional" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nag\training\revature-may-batch" />
+      <recent name="C:\Users\Nag\training\revature-may-batch\code" />
       <recent name="C:\Users\Nag\training\revature-training\revature-may-batch\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NumericStreams">
-    <configuration name="BuildingStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.BuildingStreams" />
-      <module name="play-with-java-2" />
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Application" />
+      <module name="money-transfer-system-v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="PATTERN" value="com.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Filtering" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.Filtering" />
-      <module name="play-with-java-2" />
+    <configuration name="CommandLineArgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.array.CommandLineArgs" />
+      <module name="revature-may-batch" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="PATTERN" value="com.example.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Finding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.Finding" />
+    <configuration name="FPInJava_Ex2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.fp.FPInJava_Ex2" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="PATTERN" value="com.example.fp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Mapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.Mapping" />
-      <module name="play-with-java-2" />
+    <configuration name="Intro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.string.Intro" />
+      <module name="revature-may-batch" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="PATTERN" value="com.example.string.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumericStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.stream.NumericStreams" />
+    <configuration name="Optional_Ex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.optional.Optional_Ex" />
       <module name="play-with-java-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.stream.*" />
+          <option name="PATTERN" value="com.example.optional.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NumericStreams" />
-        <item itemvalue="Application.Finding" />
-        <item itemvalue="Application.Mapping" />
-        <item itemvalue="Application.Filtering" />
-        <item itemvalue="Application.BuildingStreams" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.FPInJava_Ex2" />
+        <item itemvalue="Application.Optional_Ex" />
+        <item itemvalue="Application.Intro" />
+        <item itemvalue="Application.CommandLineArgs" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +187,14 @@
       <workItem from="1654178826318" duration="9710000" />
       <workItem from="1654193355657" duration="8904000" />
       <workItem from="1654265251953" duration="892000" />
+      <workItem from="1654538099169" duration="582000" />
+      <workItem from="1654538705189" duration="4572000" />
+      <workItem from="1654543344695" duration="561000" />
+      <workItem from="1654544194686" duration="101000" />
+      <workItem from="1654544329182" duration="397000" />
+      <workItem from="1654627580630" duration="1780000" />
+      <workItem from="1654637413917" duration="602000" />
+      <workItem from="1654687492147" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="class &amp; object intro">
       <created>1652980774518</created>
@@ -432,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654266084550</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="maven &amp; log4j intro">
+      <created>1654543850450</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1654543850450</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +480,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="exercise-2" />
     <MESSAGE value="Ex2 - partial solution" />
     <MESSAGE value="Ex2 - solution" />
     <MESSAGE value="Exception intro" />
@@ -475,7 +504,8 @@
     <MESSAGE value="stream examples" />
     <MESSAGE value="streams examples" />
     <MESSAGE value="stream practice-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="stream practice-1" />
+    <MESSAGE value="maven &amp; log4j intro" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven &amp; log4j intro" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

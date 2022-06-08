@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Money-Transfer-System-v1.1/Money-Transfer-System-v1.iml" filepath="$PROJECT_DIR$/Money-Transfer-System-v1.1/Money-Transfer-System-v1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Money-Transfer-system-v1/Money-Transfer-system-v1.iml" filepath="$PROJECT_DIR$/Money-Transfer-system-v1/Money-Transfer-system-v1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Money-Transfer-system-v1/money-transfer-system-v1.iml" filepath="$PROJECT_DIR$/Money-Transfer-system-v1/money-transfer-system-v1.iml" />
       <module fileurl="file://$PROJECT_DIR$/play-with-java-1/play-with-java-1.iml" filepath="$PROJECT_DIR$/play-with-java-1/play-with-java-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/play-with-java-2/play-with-java-2.iml" filepath="$PROJECT_DIR$/play-with-java-2/play-with-java-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/play-with-java-3/play-with-java-3.iml" filepath="$PROJECT_DIR$/code/play-with-java-3/play-with-java-3.iml" />

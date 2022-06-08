@@ -33,8 +33,7 @@ public class ReferenceArray {
 //        System.out.println(products.length);
 
 
-        for (int i = 0; i < products.length; i++) {
-            Product product = products[i];
+        for (Product product : products) {
             System.out.println(product.name);
         }
 

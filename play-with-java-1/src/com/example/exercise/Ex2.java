@@ -27,8 +27,7 @@ public class Ex2 {
 
         Map<String, Double> hashMap = new HashMap<String, Double>();
 
-        for (int i = 0; i < csvReport.length; i++) {
-            String csvRecord = csvReport[i];
+        for (String csvRecord : csvReport) {
             String[] tokens = csvRecord.split(",");
 
             String depName = tokens[1];

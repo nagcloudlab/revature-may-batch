@@ -10,8 +10,8 @@ public class PrimitiveArray {
 //            System.out.println(numbers[i]);
             numbers[i] = i * i;
         }
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+        for (int j : numbers) {
+            System.out.println(j);
         }
 //        numbers[10]=100; // cause exception
         System.out.println(numbers[9]);
