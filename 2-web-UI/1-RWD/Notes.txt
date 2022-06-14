@@ -1,0 +1,32 @@
+
+Responsive Web Design ( RWD )
+--------------------------------
+
+Responsive web design is the practice of building 
+a website suitable to work on every device and every screen size, 
+no matter how large or small, mobile or desktop. 
+
+
+
+guidlines to build responsive web site
+-----------------------------------------
+
+ 1. flexible layout
+
+    Flexible Layouts/grids
+
+    Responsive Web Design Formula
+
+    (target / context) x 100 = result %
+
+    e.g
+
+    (340/538)*100 = 63.197026%
+
+ 2. Media Queries   
+
+ 3. Mobile First Approach ( recommended )
+
+ 4. Flexible Media-content ( images , video )
+
+      

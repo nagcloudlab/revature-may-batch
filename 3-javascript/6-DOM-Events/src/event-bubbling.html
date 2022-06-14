@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+    <hr />
+    <h1>DOM Event propagation</h1>
+    <hr />
+
+
+    <div class="container">
+
+        <div class="alert alert-info" id="box">
+            <button id="b1" class="btn btn-lg btn-danger">b1</button>
+            <button id="b2" class="btn btn-lg btn-danger">b2</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        const box = document.getElementById('box')
+        const b1 = document.getElementById('b1')
+        const b2 = document.getElementById('b2')
+
+        box.addEventListener("click", e => {
+            console.log(e);
+        })
+
+        b1.addEventListener("click", e => {
+            e.stopPropagation();
+            console.log(e);
+        })
+
+        b2.addEventListener("click", e => {
+            console.log(e);
+        })
+
+    </script>
+
+</body>
+
+</html>

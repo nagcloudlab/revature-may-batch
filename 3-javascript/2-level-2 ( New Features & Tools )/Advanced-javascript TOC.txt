@@ -1,0 +1,27 @@
+
+
+-----------------------------------
+ New syntax & apis
+-----------------------------------
+
+ -> let & const keyword with block scope
+ -> string interpolation / template literals
+ -> function with default & rest params
+ -> class syntax
+ -> arrow function
+ -> spread operator
+ -> de-structuring
+ -> obj-literal enhancents
+ -> symbol & iterable objects & for-of-loop
+ -> generator functions
+ -> promise api
+ -> async & await keywords ( ES7 )
+ -> RxJs lib  ( async-api )
+ -> modules & packages
+ -> Tools : NPM & YARN
+
+ -> Build tools   => Webpack 
+
+ 
+
+ 

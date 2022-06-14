@@ -1,0 +1,31 @@
+{
+  "name": "play-with-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.prod.js",
+    "start": "webpack serve --config webpack.config.dev.js"
+  },
+  "author": "Nag",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "lodash": "^4.17.21",
+    "rxjs": "^7.4.0"
+  }
+}

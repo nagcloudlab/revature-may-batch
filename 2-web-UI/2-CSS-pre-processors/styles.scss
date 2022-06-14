@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+@mixin circle($r,$bgcolor) {
+    width: $r;
+    height: $r;
+    border-radius: math.div($r,2);
+    background-color: $bgcolor;
+}
+
+.big-circle{
+    @include circle(100px, rgb(255, 221, 230))
+}
+
+.small-circle{
+    @include circle(50px, rgb(197, 11, 61))
+}

@@ -1,0 +1,20 @@
+
+
+give me missings conceptscss in CSS ?
+
+    - no variables
+    - no arithmatic operations
+    - no utility function
+    - no style re-usability
+    - no nested-styling
+
+
+Solution:
+
+    use 'CSS pre-processor' for better style management.
+
+
+    e.g
+
+        - LESS
+        - SCSS ( popular )

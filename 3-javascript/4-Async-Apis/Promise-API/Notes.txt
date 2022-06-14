@@ -1,0 +1,41 @@
+
+
+
+
+sync Programming
+------------------------
+
+
+js-module/component-1                             js-module-component-2
+  dependent                                          dependency    
+
+
+                    pull / sync / blocking-call
+                   --------------------------------->
+                   <---------------------------------
+
+
+
+
+Async Programming API
+-----------------------------
+
+
+
+
+js-module/component-1                             js-module-component-2
+  dependent                                          dependency    
+
+
+                    call
+                   --------------------------------->
+                   <---------------------------------
+                     push / Async / Non-blocking
+
+
+ How to implement Async Programming in javascript ?
+
+ 2 ways
+
+ way-1 : Promise API  ( Es6 )
+ way-2 : Reactive Programming Lib ( RxJS )                    

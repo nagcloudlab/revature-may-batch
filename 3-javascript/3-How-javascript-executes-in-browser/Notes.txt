@@ -1,0 +1,49 @@
+
+
+Async Programming in javascript
+--------------------------------
+
+
+----------------------------------------------------------------
+javascript language :
+----------------------------------------------------------------
+
+- by default, all IO operations ( read /write ) are non-blocking/asynchrnous
+- by default, single-threaded process / light-weight process,
+  but can execute concurrent actions due to non-blocking IO  
+
+----------------------------------------------------------------  
+
+ reference :
+
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+    - http://latentflip.com/loupe/
+
+------------------------------------------------------------------    
+
+
+
+------------------------------------------------------------------------------
+browser/Node.js internal arch :
+------------------------------------------------------------------------------
+
+e.g chrome browser
+
+  1. javascript-engine/runtime ( v8 )     ==> ecma spec 
+
+     - single-call-stack  ( fixed size )
+     - heap / free-memory ( extendible memory )
+
+  2. browser web apis ( e.g DOM,Timer,XHR,...)    ==> w3c recommendations    
+
+  3. event/message/callback queue
+
+  4. event-loop
+
+  ------------------------------------------------------------------------------
+     
+  imp-note : on event, the event handler/listener/callback, 
+             always executes async
+
+ ------------------------------------------------------------------  
+

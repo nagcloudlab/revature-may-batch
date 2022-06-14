@@ -1,0 +1,39 @@
+
+body{
+    color: #fff;
+}
+
+.container:BEFORE, .container:AFTER {
+	content: '';
+	display: table;
+}
+
+.container:AFTER {
+	clear: both;
+}
+
+.container{
+    width: 538px;
+    background-color: #eaeaed;
+}
+
+.container,section,aside{
+    border-radius: 6px;
+}
+
+section,aside{
+    background: #2db34a;
+	margin: 10px;
+	padding: 20px 0;
+	text-align: center;
+}
+section{
+    float: left;
+    width: 340px;
+}
+aside{
+    float: right;
+    width: 158px;
+}
+
+
