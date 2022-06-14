@@ -27,3 +27,7 @@ hs_err_pid*
 *.iml
 
 out/
+
+.DS_Store
+
+node_modules/
