@@ -35,12 +35,56 @@ const images = ["images/1.jpeg", "images/2.jpeg", "images/3.jpeg"];
 
 const imgEle = document.getElementById("pov-img");
 
-let i = 0;
-setInterval(() => {
-  const imagePath = images[i];
-  imgEle.src = imagePath;
-  i++;
-  if (i === images.length) {
-    i = 0;
-  }
-}, 1000);
+const startBtn = document.getElementById("start");
+const stopBtn = document.getElementById("stop");
+
+stopBtn.disabled = true;
+startBtn.addEventListener("click", (e) => {
+  stopBtn.disabled = false;
+  startBtn.disabled = true;
+  let i = 0;
+  const intervalId = setInterval(() => {
+    const imagePath = images[i];
+    imgEle.src = imagePath;
+    i++;
+    if (i === images.length) {
+      i = 0;
+    }
+  }, 1000);
+  stopBtn.addEventListener("click", (e) => {
+    clearInterval(intervalId);
+    stopBtn.disabled = true;
+    startBtn.disabled = false;
+  });
+});
+
+//---------------------------------------
+// using DOM api + XHR ( XML HTTP Request ) Api
+//---------------------------------------
+
+const topFiveTodosBtn = document.getElementById("top-five-todos");
+const todoListEle = document.getElementById("todo-list");
+
+topFiveTodosBtn.addEventListener("click", (e) => {
+  const url = "https://jsonplaceholder.typicode.com/todos?_limit=5";
+  // send http request to server
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", url, false);
+  xhr.send();
+  const jsonText = xhr.responseText;
+  const todos = JSON.parse(jsonText);
+  const liElements = todos.map((todo) => {
+    return `
+        <li class="list-group-item d-flex justify-content-between ${
+          todo.completed ? "bg-success" : ""
+        }">
+            <span>${todo.id}</span>
+            <span>${todo.title}</span>
+            <span>${todo.completed}</span>
+        </li>
+      `;
+  });
+
+  todoListEle.innerHTML = liElements.join(" ");
+});
