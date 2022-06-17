@@ -52,5 +52,14 @@ public class JdbcProductRepository implements ProductRepository {
 
     public void delete(int id) {
 
+        try (Connection connection = SQLConnectionFactory.getConnection()) {
+            String sql = "delete from products where id=?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
