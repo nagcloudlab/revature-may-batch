@@ -4,6 +4,7 @@ import com.example.repository.JdbcUserRepository;
 import com.example.repository.UserRepository;
 import com.example.service.AuthService;
 import com.example.service.AuthServiceImpl;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +17,7 @@ import java.util.Date;
 
 @WebServlet(urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
+
 
     UserRepository userRepository=new JdbcUserRepository();
     AuthService authService=new AuthServiceImpl(userRepository);
