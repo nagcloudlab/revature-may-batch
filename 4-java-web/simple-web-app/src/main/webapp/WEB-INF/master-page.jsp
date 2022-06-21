@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>simple-web-app</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:8181/simple-web-app/bootstrap/css/bootstrap.css">
 </head>
 
-<body>
+<body class="container">
+
+<%
+    response.setHeader("Pragma", "No-cache");
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setDateHeader("Expires", -1);
+%>
 
 <div class="display-1">simple-web-app</div>
 <hr/>
 
-Welcome : <%=request.getAttribute("user")%>
+<div class="d-flex justify-content-between">
+    <span>Welcome : <%=session.getAttribute("user")%></span>
+    <a href="logout">Logout</a>
+</div>
 
 <hr/>
 

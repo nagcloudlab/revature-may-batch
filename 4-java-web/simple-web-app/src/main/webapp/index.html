@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>simple-web-app</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
+
 <body>
-$END$
+
+<div class="display-1">simple-web-app</div>
+<hr/>
+
+<div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-info">Login Form</div>
+            <div class="card-body">
+                <form action="login" method="post">
+                    <div>
+                        <label class="form-label">Username</label>
+                        <input class="form-control" type="text" name="username" value="tom"/>
+                    </div>
+                    <div>
+                        <label class="form-label">Password</label>
+                        <input class="form-control" type="password" name="password" value="tom123"/>
+                    </div>
+                    <div class="mt-2 d-flex flex-row-reverse">
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
+
 </html>
