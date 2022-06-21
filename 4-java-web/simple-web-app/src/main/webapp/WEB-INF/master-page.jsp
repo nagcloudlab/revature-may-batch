@@ -1,3 +1,5 @@
+<%@ page import="com.example.entity.User" %>
+<%@ page import="com.example.entity.Role" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,9 +21,21 @@
 <hr/>
 
 <div class="d-flex justify-content-between">
-    <span>Welcome : <%=session.getAttribute("user")%></span>
+    <%
+        User user = (User) session.getAttribute("user");
+    %>
+    <span>Welcome : <%=user.getName()%> </span>
     <a href="logout">Logout</a>
+    <hr/>
 </div>
+<hr/>
+<%
+    for (Role role : user.getRoles()) {
+%>
+<span><%=role.getRole()%></span>
+<%
+    }
+%>
 
 <hr/>
 

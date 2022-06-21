@@ -19,14 +19,14 @@
         <div class="card">
             <div class="card-header bg-info">Login Form</div>
             <div class="card-body">
-                <form action="login" method="post">
+                <form id="login-form" action="login" method="post">
                     <div>
                         <label class="form-label">Username</label>
-                        <input class="form-control" type="text" name="username" value="tom"/>
+                        <input id="username" class="form-control" type="text" name="username" value=""/>
                     </div>
                     <div>
                         <label class="form-label">Password</label>
-                        <input class="form-control" type="password" name="password" value="tom123"/>
+                        <input id="password" class="form-control" type="password" name="password" value=""/>
                     </div>
                     <div class="mt-2 d-flex flex-row-reverse">
                         <button class="btn btn-primary">Login</button>
@@ -37,6 +37,8 @@
     </div>
 </div>
 
+
+<script src="index.js"></script>
 
 </body>
 

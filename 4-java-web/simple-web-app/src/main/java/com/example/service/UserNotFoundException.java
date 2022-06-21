@@ -1,2 +1,5 @@
-package com.example.service;public class UserNotFoundException {
+package com.example.service;
+
+
+public class UserNotFoundException extends RuntimeException {
 }

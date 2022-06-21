@@ -24,7 +24,7 @@
     <%
         User user = (User) session.getAttribute("user");
     %>
-    <span>Welcome : <%=user.getName()%> </span>
+    <span>Welcome : Admin </span>
     <a href="logout">Logout</a>
     <hr/>
 </div>
