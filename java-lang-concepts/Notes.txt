@@ -1,0 +1,12 @@
+
+
+
+Java lang Naming conventions
+
+keywords ==> lower-case
+package Names ==> lower-case
+Type Names ( interface , class , enum , annotation ) ==> PascalCase  , A___B___ , singular-noun
+var, method ==> camel-case  , ____B____C____ , var ==> noun , method => verb
+constants ==> upper-case
+
+
