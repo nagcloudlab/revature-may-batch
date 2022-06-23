@@ -1,0 +1,142 @@
+2022-06-23 22:17:24
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (11.0.13+10-LTS-370 mixed mode):
+
+Threads class SMR info:
+_java_thread_list=0x000001907d3ccf30, length=13, elements={
+0x000001907cf76000, 0x000001907cf77800, 0x000001907cffc800, 0x000001907cfff800,
+0x000001907d001000, 0x000001907d004000, 0x000001907d006000, 0x000001907d009800,
+0x000001907d179000, 0x000001907d48d800, 0x000001907d487800, 0x000001907d3c7800,
+0x000001904f038000
+}
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 cpu=0.00ms elapsed=399.95s tid=0x000001907cf76000 nid=0x54c waiting on condition  [0x0000003cf23ff0
+00]
+   java.lang.Thread.State: RUNNABLE
+        at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.13/Native Method)
+        at java.lang.ref.Reference.processPendingReferences(java.base@11.0.13/Reference.java:241)
+        at java.lang.ref.Reference$ReferenceHandler.run(java.base@11.0.13/Reference.java:213)
+
+"Finalizer" #3 daemon prio=8 os_prio=1 cpu=0.00ms elapsed=399.95s tid=0x000001907cf77800 nid=0x1418 in Object.wait()  [0x0000003cf24fe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(java.base@11.0.13/Native Method)
+        - waiting on <0x0000000622608fa8> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(java.base@11.0.13/ReferenceQueue.java:155)
+        - waiting to re-lock in wait() <0x0000000622608fa8> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(java.base@11.0.13/ReferenceQueue.java:176)
+        at java.lang.ref.Finalizer$FinalizerThread.run(java.base@11.0.13/Finalizer.java:170)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=2 cpu=0.00ms elapsed=399.94s tid=0x000001907cffc800 nid=0x428 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #5 daemon prio=5 os_prio=2 cpu=15.63ms elapsed=399.94s tid=0x000001907cfff800 nid=0x1f78 waiting on condition  [0x000000000000000
+0]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #6 daemon prio=9 os_prio=0 cpu=0.00ms elapsed=399.94s tid=0x000001907d001000 nid=0x4428 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=2 cpu=31.25ms elapsed=399.94s tid=0x000001907d004000 nid=0x16e8 waiting on condition  [0x000000000000
+0000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 daemon prio=9 os_prio=2 cpu=46.88ms elapsed=399.94s tid=0x000001907d006000 nid=0xb60 waiting on condition  [0x000000000000
+0000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Sweeper thread" #19 daemon prio=9 os_prio=2 cpu=0.00ms elapsed=399.94s tid=0x000001907d009800 nid=0x15cc runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #20 daemon prio=8 os_prio=1 cpu=0.00ms elapsed=399.90s tid=0x000001907d179000 nid=0x3644 in Object.wait()  [0x0000003cf2bff000]   
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(java.base@11.0.13/Native Method)
+        - waiting on <0x0000000622677cd8> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(java.base@11.0.13/ReferenceQueue.java:155)
+        - waiting to re-lock in wait() <0x0000000622677cd8> (a java.lang.ref.ReferenceQueue$Lock)
+        at jdk.internal.ref.CleanerImpl.run(java.base@11.0.13/CleanerImpl.java:148)
+        at java.lang.Thread.run(java.base@11.0.13/Thread.java:834)
+        at jdk.internal.misc.InnocuousThread.run(java.base@11.0.13/InnocuousThread.java:134)
+
+"Monitor Ctrl-Break" #21 daemon prio=5 os_prio=0 cpu=15.63ms elapsed=399.85s tid=0x000001907d48d800 nid=0x1ddc runnable  [0x0000003cf31fe000]      
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(java.base@11.0.13/Native Method)
+        at java.net.SocketInputStream.socketRead(java.base@11.0.13/SocketInputStream.java:115)
+        at java.net.SocketInputStream.read(java.base@11.0.13/SocketInputStream.java:168)
+        at java.net.SocketInputStream.read(java.base@11.0.13/SocketInputStream.java:140)
+        at sun.nio.cs.StreamDecoder.readBytes(java.base@11.0.13/StreamDecoder.java:284)
+        at sun.nio.cs.StreamDecoder.implRead(java.base@11.0.13/StreamDecoder.java:326)
+        at sun.nio.cs.StreamDecoder.read(java.base@11.0.13/StreamDecoder.java:178)
+        - locked <0x00000006224887e0> (a java.io.InputStreamReader)
+        at java.io.InputStreamReader.read(java.base@11.0.13/InputStreamReader.java:181)
+        at java.io.BufferedReader.fill(java.base@11.0.13/BufferedReader.java:161)
+        at java.io.BufferedReader.readLine(java.base@11.0.13/BufferedReader.java:326)
+        - locked <0x00000006224887e0> (a java.io.InputStreamReader)
+        at java.io.BufferedReader.readLine(java.base@11.0.13/BufferedReader.java:392)
+        at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:49)
+
+"T1" #22 prio=5 os_prio=0 cpu=0.00ms elapsed=399.85s tid=0x000001907d487800 nid=0xcc4 waiting for monitor entry  [0x0000003cf33ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at com.example.R2.m2(Deadlock.java:25)
+        - waiting to lock <0x0000000622457638> (a com.example.R2)
+        at com.example.R1.m1(Deadlock.java:9)
+        - locked <0x0000000622456490> (a com.example.R1)
+        at com.example.Deadlock.lambda$main$0(Deadlock.java:38)
+        at com.example.Deadlock$$Lambda$14/0x0000000800066840.run(Unknown Source)
+        at java.lang.Thread.run(java.base@11.0.13/Thread.java:834)
+
+"T2" #23 prio=5 os_prio=0 cpu=0.00ms elapsed=399.85s tid=0x000001907d3c7800 nid=0xe0c waiting for monitor entry  [0x0000003cf34ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at com.example.R1.m2(Deadlock.java:13)
+        - waiting to lock <0x0000000622456490> (a com.example.R1)
+        at com.example.R2.m1(Deadlock.java:21)
+        - locked <0x0000000622457638> (a com.example.R2)
+        at com.example.Deadlock.lambda$main$0(Deadlock.java:41)
+        at com.example.Deadlock$$Lambda$14/0x0000000800066840.run(Unknown Source)
+        at java.lang.Thread.run(java.base@11.0.13/Thread.java:834)
+
+"DestroyJavaVM" #24 prio=5 os_prio=0 cpu=140.63ms elapsed=399.85s tid=0x000001904f038000 nid=0x24a0 waiting on condition  [0x0000000000000000]     
+   java.lang.Thread.State: RUNNABLE
+
+"VM Thread" os_prio=2 cpu=0.00ms elapsed=399.95s tid=0x000001907cf75800 nid=0xafc runnable
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=399.97s tid=0x000001904f04d000 nid=0x3e80 runnable
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=399.97s tid=0x000001904f0cc800 nid=0xb04 runnable
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=399.97s tid=0x000001904f0ce000 nid=0x38d4 runnable
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=399.96s tid=0x000001907c2a5800 nid=0x444c runnable
+
+"G1 Young RemSet Sampling" os_prio=2 cpu=0.00ms elapsed=399.96s tid=0x000001907c2a7800 nid=0x3020 runnable
+"VM Periodic Task Thread" os_prio=2 cpu=0.00ms elapsed=399.85s tid=0x000001907d493000 nid=0xcd4 waiting on condition
+
+JNI global refs: 23, weak refs: 0
+
+
+Found one Java-level deadlock:
+=============================
+"T1":
+  waiting to lock monitor 0x000001907cfa1900 (object 0x0000000622457638, a com.example.R2),
+  which is held by "T2"
+"T2":
+  waiting to lock monitor 0x000001907cf9f800 (object 0x0000000622456490, a com.example.R1),
+  which is held by "T1"
+
+Java stack information for the threads listed above:
+===================================================
+"T1":
+        at com.example.R2.m2(Deadlock.java:25)
+        - waiting to lock <0x0000000622457638> (a com.example.R2)
+        at com.example.R1.m1(Deadlock.java:9)
+        at java.lang.Thread.run(java.base@11.0.13/Thread.java:834)
+"T2":
+        at com.example.R1.m2(Deadlock.java:13)
+        - waiting to lock <0x0000000622456490> (a com.example.R1)
+        at com.example.R2.m1(Deadlock.java:21)
+        - locked <0x0000000622457638> (a com.example.R2)
+        at com.example.Deadlock.lambda$main$0(Deadlock.java:41)
+        at com.example.Deadlock$$Lambda$14/0x0000000800066840.run(Unknown Source)
+        at java.lang.Thread.run(java.base@11.0.13/Thread.java:834)
+
+Found 1 deadlock.
