@@ -5,17 +5,22 @@ import com.example.repository.JdbcAccountRepository;
 import com.example.service.TransferService;
 import com.example.service.UPITransferService;
 import org.apache.commons.dbcp.BasicDataSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Description;
-import org.springframework.context.annotation.Import;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.*;
 
 import javax.sql.DataSource;
 
 
 @Configuration
 @Import({DataSourceConfiguration.class})
+@PropertySource("classpath:transfer.properties")
 public class ApplicationConfiguration {
+
+
+//    @Value("#{environment['daily.limit']}")
+    // - or -
+    @Value("${daily.limit}")
+    int maxTransfersPerDay;
 
     @Bean
     @Description("Provides access to data from the Accounts table")
@@ -24,6 +29,7 @@ public class ApplicationConfiguration {
     }
 
     @Bean("transferService")
+    @Scope("singleton")
     @Description("Handles all transfer related use-cases")
     public TransferService transferService1(AccountRepository  accountRepository) {
         return new UPITransferService(accountRepository);

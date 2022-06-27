@@ -17,10 +17,7 @@ public class Application {
 
         TransferService transferService = applicationContext.getBean(TransferService.class);
 
-        // use
-        transferService.transfer(100.00, "1", "2");
-
-        System.out.println("-".repeat(50));
+        transferService.transfer(100.00,"1","2");
 
         // destroy
         applicationContext.close();
