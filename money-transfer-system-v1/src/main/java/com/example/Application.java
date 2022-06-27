@@ -10,16 +10,25 @@ public class Application {
     public static void main(String[] args) {
 
 
+        //---------------------------------------------------------
+        // init / booting
+        //---------------------------------------------------------
         ConfigurableApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-        System.out.println("-".repeat(50));
+        System.out.println("-".repeat(100));
+        //----------------------------------------------------------
+        // Use
+        //----------------------------------------------------------
 
         TransferService transferService = applicationContext.getBean(TransferService.class);
 
         transferService.transfer(100.00,"1","2");
 
-        // destroy
+        //------------------------------------------------------------
+        // Destroy
+        //------------------------------------------------------------
+        System.out.println("-".repeat(100));
         applicationContext.close();
 
     }

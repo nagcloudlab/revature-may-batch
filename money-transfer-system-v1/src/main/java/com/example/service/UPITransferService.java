@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.execeptions.AccountBalanceException;
 import com.example.model.Account;
 import com.example.repository.AccountRepository;
 import com.example.repository.JdbcAccountRepository;
@@ -12,6 +13,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 //@Component
 //@Service
@@ -38,6 +42,24 @@ public class UPITransferService implements TransferService {
 //        this.accountRepository = accountRepository;
 //    }
 
+    @PostConstruct
+    public void init() {
+        logger.info("init()");
+    }
+
+
+    @PreDestroy
+    public void clean() {
+        // any clean up work before bean GC
+        logger.info("clean()");
+    }
+
+
+    // auth
+    // exception handling
+    // transaction management
+    // metrics
+    //...
     @Override
     public void transfer(double amount, String sourceAccountNumber, String targetAccountNumber) {
 
@@ -46,12 +68,16 @@ public class UPITransferService implements TransferService {
         Account sourceAccount = accountRepository.loadAccount(sourceAccountNumber);
         Account targetAccount = accountRepository.loadAccount(targetAccountNumber);
 
+        if(sourceAccount.getBalance()<amount)
+            throw new AccountBalanceException();
+
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         logger.info("debit");
         targetAccount.setBalance(targetAccount.getBalance() + amount);
         logger.info("credit");
 
         accountRepository.updateAccount(sourceAccount);
+        // boom
         accountRepository.updateAccount(targetAccount);
 
         logger.info("transfer finished..");
