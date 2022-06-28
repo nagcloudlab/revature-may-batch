@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages = {"com.example"})
-@Import({DataSourceConfiguration.class})
+@Import({DataSourceConfiguration.class,JdbcTemplateConfiguration.class})
 @PropertySource("classpath:transfer.properties")
 public class ApplicationConfiguration {
 

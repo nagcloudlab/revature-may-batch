@@ -72,12 +72,12 @@ public class UPITransferService implements TransferService {
         targetAccount.setBalance(targetAccount.getBalance() + amount);
         logger.info("credit");
 
-        if(false){
-            throw new IllegalStateException("oops");
-        }
 
         accountRepository.updateAccount(sourceAccount);
         // boom
+        if (true) {
+            throw new IllegalStateException("oops");
+        }
         accountRepository.updateAccount(targetAccount);
 
         //logger.info("transfer finished..");

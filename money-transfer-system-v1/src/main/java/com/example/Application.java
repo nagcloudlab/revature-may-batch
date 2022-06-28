@@ -25,7 +25,7 @@ public class Application {
             TransferService transferService = applicationContext.getBean(TransferService.class);
             System.out.println(transferService.getClass());
 
-            transferService.transfer(100.00, "1", "2");
+            transferService.transfer(800, "1", "2");
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
