@@ -21,10 +21,15 @@ public class Application {
         // Use
         //----------------------------------------------------------
 
-        TransferService transferService = applicationContext.getBean(TransferService.class);
+        try {
+            TransferService transferService = applicationContext.getBean(TransferService.class);
+            System.out.println(transferService.getClass());
 
-        transferService.transfer(100.00,"1","2");
+            transferService.transfer(100.00, "1", "2");
 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         //------------------------------------------------------------
         // Destroy
         //------------------------------------------------------------

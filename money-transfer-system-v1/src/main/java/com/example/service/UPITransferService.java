@@ -55,20 +55,16 @@ public class UPITransferService implements TransferService {
     }
 
 
-    // auth
-    // exception handling
-    // transaction management
-    // metrics
-    //...
+    // Join Point
     @Override
     public void transfer(double amount, String sourceAccountNumber, String targetAccountNumber) {
 
-        logger.info("transfer initiated..");
+        //logger.info("transfer initiated..");
 
         Account sourceAccount = accountRepository.loadAccount(sourceAccountNumber);
         Account targetAccount = accountRepository.loadAccount(targetAccountNumber);
 
-        if(sourceAccount.getBalance()<amount)
+        if (sourceAccount.getBalance() < amount)
             throw new AccountBalanceException();
 
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
@@ -76,11 +72,15 @@ public class UPITransferService implements TransferService {
         targetAccount.setBalance(targetAccount.getBalance() + amount);
         logger.info("credit");
 
+        if(false){
+            throw new IllegalStateException("oops");
+        }
+
         accountRepository.updateAccount(sourceAccount);
         // boom
         accountRepository.updateAccount(targetAccount);
 
-        logger.info("transfer finished..");
+        //logger.info("transfer finished..");
 
     }
 

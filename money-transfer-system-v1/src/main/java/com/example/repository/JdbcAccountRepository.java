@@ -34,7 +34,7 @@ public class JdbcAccountRepository implements AccountRepository {
 
 
     public Account loadAccount(String number) {
-        logger.info("loading account - " + number);
+//        logger.info("loading account - " + number);
         try {
             Connection conn = dataSource.getConnection();
 
@@ -47,7 +47,7 @@ public class JdbcAccountRepository implements AccountRepository {
     }
 
     public void updateAccount(Account account) {
-        logger.info("updating account - " + account.getNumber());
+//        logger.info("updating account - " + account.getNumber());
         //..
     }
 
