@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
+//@Component
 public class LoggingAspect {
 
     private static final Logger logger = Logger.getLogger("mts");

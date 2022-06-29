@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 //@Component
-@Repository
+//@Repository
 @Qualifier("jdbc")
 public class JdbcAccountRepository implements AccountRepository {
 

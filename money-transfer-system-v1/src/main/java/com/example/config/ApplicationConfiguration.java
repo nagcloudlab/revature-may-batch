@@ -7,12 +7,14 @@ import com.example.service.UPITransferService;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 
 @Configuration
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 @ComponentScan(basePackages = {"com.example"})
 @Import({DataSourceConfiguration.class,JdbcTemplateConfiguration.class})
 @PropertySource("classpath:transfer.properties")

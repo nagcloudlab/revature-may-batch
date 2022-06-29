@@ -25,7 +25,7 @@ public class ApplicationConfiguration {
 //        return new PriceMatrix_v2();
 //    }
 //
-//    @Bean
+//    @Bean("ob")
 //    public Billing onlineBilling(){
 //        return new OnlineBilling(priceMatrixV1());
 //    }

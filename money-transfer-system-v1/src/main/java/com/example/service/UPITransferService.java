@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -30,7 +33,7 @@ public class UPITransferService implements TransferService {
     private AccountRepository accountRepository;
 
     @Autowired
-    public UPITransferService(@Qualifier("jdbc") AccountRepository accountRepository,
+    public UPITransferService(@Qualifier("jpa") AccountRepository accountRepository,
                               @Value("${daily.limit:1000}") int dailyTransferLimit) {
         System.out.println(dailyTransferLimit);
         this.accountRepository = accountRepository;
@@ -57,31 +60,30 @@ public class UPITransferService implements TransferService {
 
     // Join Point
     @Override
+    @Transactional(
+            transactionManager = "transactionManager",
+            isolation = Isolation.READ_COMMITTED,
+            propagation = Propagation.REQUIRED,
+            rollbackFor = {AccountBalanceException.class,IllegalStateException.class},
+            noRollbackFor = {RuntimeException.class}
+    )
     public void transfer(double amount, String sourceAccountNumber, String targetAccountNumber) {
-
         //logger.info("transfer initiated..");
-
         Account sourceAccount = accountRepository.loadAccount(sourceAccountNumber);
         Account targetAccount = accountRepository.loadAccount(targetAccountNumber);
-
         if (sourceAccount.getBalance() < amount)
-            throw new AccountBalanceException();
-
+            throw new AccountBalanceException("no balance");
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         logger.info("debit");
         targetAccount.setBalance(targetAccount.getBalance() + amount);
         logger.info("credit");
-
-
         accountRepository.updateAccount(sourceAccount);
         // boom
-        if (true) {
+        if (false) {
             throw new IllegalStateException("oops");
         }
         accountRepository.updateAccount(targetAccount);
-
         //logger.info("transfer finished..");
-
     }
 
 }

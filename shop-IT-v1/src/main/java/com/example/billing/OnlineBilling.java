@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+@Component("ob")
 public class OnlineBilling implements Billing {
 
     private PriceMatrix priceMatrix;

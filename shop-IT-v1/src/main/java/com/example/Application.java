@@ -14,7 +14,7 @@ public class Application {
                 new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
 
-        Billing billing = applicationContext.getBean("onlineBilling", Billing.class);
+        Billing billing = applicationContext.getBean("ob", Billing.class);
 
         List<String> cart1 = List.of("123", "456");
         double totalPrice = billing.getTotalPrice(cart1);
