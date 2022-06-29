@@ -1,13 +1,11 @@
 package com.example;
 
+import com.config.RevatureAutoConfiguration;
 import com.example.service.TransferService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.*;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -39,6 +37,10 @@ public class Application {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+//        String re = applicationContext.getBean("revature", String.class);
+//        System.out.println(re);
+
         //------------------------------------------------------------
         // Destroy
         //------------------------------------------------------------
