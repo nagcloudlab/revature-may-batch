@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+</head>
+<body class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Transfer Form</div>
+                <div class="card-body">
+                    <form action="transfer" method="POST">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="text" class="form-control" name="amount"/>
+                        </div>
+                        <div class="form-group">
+                            <label>From Account</label>
+                            <input type="text" class="form-control" name="sourceAccountNumber"/>
+                        </div>
+                        <div class="form-group">
+                            <label>To Account</label>
+                            <input type="text" class="form-control" name="targetAccountNumber"/>
+                        </div>
+                        <br/>
+                        <button class="btn btn-primary">Transfer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
