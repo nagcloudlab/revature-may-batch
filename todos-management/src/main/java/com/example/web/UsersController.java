@@ -27,7 +27,7 @@ public class UsersController {
     ) {
         userService.register(username, password, name);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:sign-in.html");
+        mav.setViewName("redirect:login");
         return mav;
     }
 
