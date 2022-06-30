@@ -21,4 +21,9 @@ public class Todo {
     @Enumerated(EnumType.STRING)
     private TodoType type;
 
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
+
+
 }

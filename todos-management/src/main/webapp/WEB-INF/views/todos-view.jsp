@@ -18,7 +18,7 @@
         <a class="nav-link active" href="todos">View Todos</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">New Todo</a>
+        <a class="nav-link" href="new-todo.html">New Todo</a>
     </li>
 </ul>
 
