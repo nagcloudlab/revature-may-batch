@@ -2,9 +2,12 @@ package com.example.web;
 
 import com.example.entity.Todo;
 import com.example.entity.TodoType;
+import com.example.entity.User;
 import com.example.repository.TodoRepository;
+import com.example.repository.UserRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,9 +22,11 @@ import java.util.List;
 public class TodosController {
 
     private TodoRepository todoRepository;
+    private UserRepository userRepository;
 
-    public TodosController(TodoRepository todoRepository) {
+    public TodosController(TodoRepository todoRepository, UserRepository userRepository) {
         this.todoRepository = todoRepository;
+        this.userRepository = userRepository;
     }
 
     @RequestMapping(
@@ -29,18 +34,12 @@ public class TodosController {
             value = "/todos"
     )
     public ModelAndView getTodos(/*Principal principal*/) {
-
 //        System.out.println(principal.getName());
-
-
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Object principal = authentication.getPrincipal();
-        System.out.println(principal);
-
-        Collection<?> roles = authentication.getAuthorities();
-        System.out.println(roles);
-
-        Iterable<Todo> todos = todoRepository.findAll();
+        UserDetails userdetails = (UserDetails) authentication.getPrincipal();
+        String username = userdetails.getUsername();
+        User dbUser = userRepository.findByUsername(username);
+        Iterable<Todo> todos = todoRepository.findByUserId(dbUser.getId());
         ModelAndView mav = new ModelAndView(); // Map colln
         mav.addObject("all-todos", todos);
         mav.setViewName("todos-view");
@@ -70,9 +69,14 @@ public class TodosController {
         Todo todo = new Todo();
         todo.setTitle(title);
         todo.setType(TodoType.valueOf(type));
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userdetails = (UserDetails) authentication.getPrincipal();
+        String username = userdetails.getUsername();
+        User dbUser = userRepository.findByUsername(username);
+        todo.setUser(dbUser);
         todoRepository.save(todo);
         ModelAndView mav = new ModelAndView(); // Map colln
-        mav.setViewName("redirect:todos");
+        mav.setViewName("redirect:/todos");
         return mav;
     }
 

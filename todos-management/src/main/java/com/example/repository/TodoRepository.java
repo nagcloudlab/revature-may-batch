@@ -13,5 +13,9 @@ public interface TodoRepository extends CrudRepository<Todo,Integer> {
 
 //    @Query("from Todo where type=?1 and completed=?2")
     List<Todo> findByTypeAndCompleted(TodoType type,boolean completed);
+    //    @Query("from Todo where user.id=?1")
+    List<Todo> findByUserId(int userId);
+
+
 
 }
