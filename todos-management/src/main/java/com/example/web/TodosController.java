@@ -54,7 +54,7 @@ public class TodosController {
     public ModelAndView deleteTodo(@RequestParam("id") int id) {
         todoRepository.deleteById(id);
         ModelAndView mav = new ModelAndView(); // Map colln
-        mav.setViewName("redirect:todos");
+        mav.setViewName("redirect:/todos");
         return mav;
     }
 

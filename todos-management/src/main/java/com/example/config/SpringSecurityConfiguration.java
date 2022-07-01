@@ -29,8 +29,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/todos/**").authenticated()
                 .and()
                 .formLogin()
-                .defaultSuccessUrl("/todos",true)
-                .failureUrl("/login");
+                .defaultSuccessUrl("/todos",true);
 
     }
 

@@ -40,7 +40,7 @@
         <td><%=todo.getType().toString()%>
         </td>
         <td>
-            <a href="delete-todo?id=<%=todo.getId()%>" style="cursor: pointer"><i class="fa fa-trash"></i></a>
+            <a href="todos/delete-todo?id=<%=todo.getId()%>" style="cursor: pointer"><i class="fa fa-trash"></i></a>
         </td>
     </tr>
     <%
