@@ -141,13 +141,3 @@ How to use javascript with server-side appln ?  ( back end )
     -> Express.js  =>  strongloop/IBM lib 
 
 
-
-
-datasources
------------------------------------------------------------
-
-    -> mySQL
-    -> MongoDB
-
-devops tools
-------------------------------------------------------------    

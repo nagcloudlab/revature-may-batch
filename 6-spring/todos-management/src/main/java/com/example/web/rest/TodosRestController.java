@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @RestController
+@CrossOrigin(value = "*")
 //@RequestMapping(value = "/api/todos")
 public class TodosRestController {
 
@@ -37,6 +39,14 @@ public class TodosRestController {
             @RequestParam(value = "size", required = false) Integer size
     ) {
         Iterable<Todo> todos = todoRepository.findAll();
+
+        //
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         // Pageable pageReq = PageRequest.of(page, size);
         // Iterable<Todo> todos = todoRepository.findAll(pageReq);
         return StreamSupport.stream(todos.spliterator(), false)
@@ -170,7 +180,6 @@ public class TodosRestController {
         todoRepository.deleteById(id);
         return ResponseEntity.ok(null);
     }
-
 
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
