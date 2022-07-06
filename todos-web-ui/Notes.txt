@@ -1,0 +1,93 @@
+
+
+Fron-End / UI developer
+---------------------------
+
+
+HTML,CSS
+Javascript
+Browser Apis - DOM , XHR, Timer
+Tools - NPM , Webpack
+
+-----------------------------------
+
+
+
+------------------------------------------------------------------------------
+challenges while using plain-javascript ( your  code ) with browser apis
+------------------------------------------------------------------------------
+
+--> browser compatabilty issues
+     http://caniuse.com
+--> should handle memory issues manually i.e clean unwanted/invivisible DOM Elements 
+--> should handle performance issues i.e should keep minimal DOM touch     
+--> too much code for simple operations
+--> code organization is difficult
+
+
+legacy solution:
+
+    => server-side page technologies
+
+       e.g jsp
+
+limitatios of server-side page technologies:
+
+    --> on every request, 
+        server-side programs shud generate new-page keeping client's state
+    --> on every-response, also n/w bandwidth leats latency    
+    --> on every response, browser should reload current with new-page
+
+    
+    +
+
+    --> Mobile clients 
+
+    
+best soln:
+
+    => using client-side/browser UI 
+
+    
+    how?
+
+     -> New browsers
+     -> HTML-5 APIs
+     +
+     -> using third-party javascript lib & F.Ws
+
+     
+-------------------------------------------------------------------------------------------------
+third-party javascript lib & F.Ws
+-------------------------------------------------------------------------------------------------
+
+
+
+Jquery
+
+    => DOM & XHR utility lib
+
+
+MVC based lib & F.W
+------------------------
+
+    - Knockout.js
+    - Backbone.js
+    - Ember.js
+    - Angular.js  
+    - DOJO
+    - ExtJS from sencha
+
+
+** MVC is arch is bad for complex UI
+
+
+Component based UI arch
+---------------------------
+
+facebook => React.js ( rank-1 )
+google   => Angular  ( rank-2 ) - our focus
+         => Vue.js   ( rank-3 ) - 4
+
+
+------------------------------------------------------------
