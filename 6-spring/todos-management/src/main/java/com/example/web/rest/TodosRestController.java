@@ -41,11 +41,11 @@ public class TodosRestController {
         Iterable<Todo> todos = todoRepository.findAll();
 
         //
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(5);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         // Pageable pageReq = PageRequest.of(page, size);
         // Iterable<Todo> todos = todoRepository.findAll(pageReq);

@@ -111,9 +111,6 @@ file-names          ==> pascal-case,lower-case , data-types.js
 => modules
 => package management tools : NPM / YARN
 
-
-
-
 ------------------------------------------------------------------
 //  javascript : level-3 topics
 ------------------------------------------------------------------
@@ -123,7 +120,6 @@ Async/Non-blocking Programming
 
 => promise api
 => reactive programming with javascript
-=> Unit-Testing  : JEST 
 
 
 ------------------------------------------------------------------
