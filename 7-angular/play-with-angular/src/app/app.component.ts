@@ -13,18 +13,28 @@ export class AppComponent {
     {
       name: "VEG",
       price: 100.00,
-      description: 'veg is always yummy',
+      description: 'Veg is always yummy',
       isAvailable: true,
       imgPath: "assets/veg.png"
     },
     {
       name: "Non-VEG",
       price: 200.00,
-      description: 'non-veg is not always yummy',
+      description: 'Non-veg is not always yummy',
       isAvailable: false,
       imgPath: "assets/non-veg.jpg"
     },
   ]
+
+  currentTab = 1
+
+  handleTabChange(event: Event, tabIndex: number) {
+    this.currentTab = tabIndex
+  }
+
+  isTabSelected(tabIndex: number) {
+    return this.currentTab === tabIndex
+  }
 
 
 }
