@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'play-with-angular';
+
+  title = "FTGO"
+
+  items = [
+    {
+      name: "VEG",
+      price: 100.00,
+      description: 'veg is always yummy',
+      isAvailable: true,
+      imgPath: "assets/veg.png"
+    },
+    {
+      name: "Non-VEG",
+      price: 200.00,
+      description: 'non-veg is not always yummy',
+      isAvailable: false,
+      imgPath: "assets/non-veg.jpg"
+    },
+  ]
+
+
 }

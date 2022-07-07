@@ -1,3 +1,24 @@
 <div class="container">
-    <div class="display-1">im App component</div>
+    <div class="display-1">
+        {{title}}
+    </div>
+    <hr />
+
+    <div class="list-group">
+        <div *ngFor="let item of items" class="list-group-item">
+            <div class="row">
+                <div class="col-3">
+                    <img class="img-fluid" src="{{item.imgPath}}" alt="{{item.name}}" />
+                </div>
+                <div class="col-9">
+                    <div class="display-4">{{item.name}}</div>
+                    <div class="display-5">{{item.price}}</div>
+                    <div class="display-6">{{item.description}}</div>
+                    <button *ngIf="item.isAvailable" class="btn btn-primary">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
