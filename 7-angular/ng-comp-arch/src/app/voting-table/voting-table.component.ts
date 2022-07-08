@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-voting-table',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./voting-table.component.css']
 })
 export class VotingTableComponent implements OnInit {
+
+
+  @Input()
+  summary: any = {}
 
   constructor() { }
 

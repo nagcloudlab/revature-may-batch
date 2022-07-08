@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-voting-item',
@@ -11,6 +11,9 @@ export class VotingItemComponent implements OnInit {
   @Input()
   value = "Unknown"
 
+  @Output()
+  vote = new EventEmitter()
+
   likes = 0; // state / data
   dislikes = 0; // state / data
 
@@ -19,6 +22,11 @@ export class VotingItemComponent implements OnInit {
       this.dislikes++
     else
       this.likes++
+    this.vote.emit({
+      item: this.value,
+      likes: this.likes,
+      dislikes: this.dislikes
+    })
   }
 
   constructor() { }

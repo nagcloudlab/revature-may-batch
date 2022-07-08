@@ -3,15 +3,15 @@
         <thead>
             <tr>
                 <th>Item</th>
-                <th>+ve</th>
-                <th>-ve</th>
+                <th>likes</th>
+                <th>dislikes</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Item-1</td>
-                <td>5</td>
-                <td>4</td>
+            <tr *ngFor="let line of summary | keyvalue" [ngClass]="{'bg-danger':line.value.likes<line.value.dislikes}">
+                <td>{{line.key}}</td>
+                <td>{{line.value.likes}}</td>
+                <td>{{line.value.dislikes}}</td>
             </tr>
         </tbody>
     </table>
