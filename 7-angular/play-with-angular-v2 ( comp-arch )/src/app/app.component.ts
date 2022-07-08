@@ -9,4 +9,10 @@ export class AppComponent {
 
   title = "FTGO"
 
+  cart: Array<any> = []
+
+  addToCart(item: any) {
+    this.cart.push(item)
+  }
+
 }

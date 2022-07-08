@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item/item.component';
+import { CartBadgeComponent } from './cart-badge/cart-badge.component';
+import { ReviewComponent } from './review/review.component';
+import { DiscountPipe } from './discount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ItemListComponent,
-    ItemComponent
+    ItemComponent,
+    CartBadgeComponent,
+    ReviewComponent,
+    DiscountPipe
   ],
   imports: [
     BrowserModule

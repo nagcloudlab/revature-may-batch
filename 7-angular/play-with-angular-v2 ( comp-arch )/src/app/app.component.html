@@ -1,4 +1,6 @@
 <div class="container">
     <app-header [title]="title"></app-header>
-    <app-item-list></app-item-list>
+    <app-cart-badge [value]="cart.length"></app-cart-badge>
+    <hr />
+    <app-item-list (buy)="addToCart($event)"></app-item-list>
 </div>

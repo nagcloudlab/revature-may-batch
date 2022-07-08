@@ -3,9 +3,10 @@
         <img class="img-fluid" [src]="item.imgPath" [alt]="item.name" />
     </div>
     <div class="col-9">
-        <div class="display-4">{{item.name}}</div>
-        <div class="display-5">{{item.price}}</div>
-        <button [disabled]="!item.isAvailable" class="btn btn-primary">Buy</button>
+        <!-- {{item|json}} -->
+        <div class="display-4">{{item.name}}</div><small>{{item.makeDate | date:'dd-MMM-yyyy: hh:mm:ss'}}</small>
+        <div class="display-5">{{item.price | discount:item.offPrice | currency : item.currencyCode}}</div>
+        <button (click)="handleBuy()" [disabled]="!item.isAvailable" class="btn btn-primary">Buy</button>
         <ul class="mt-2 nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link" [class.active]="isTabSelected(1)" (click)="handleTabChange($event,1)"
@@ -20,8 +21,11 @@
                     href="#">Reviews</a>
             </li>
         </ul>
-        <div *ngIf="isTabSelected(1)" class="display-6">{{item.description}}</div>
+        <div *ngIf="isTabSelected(1)" class="display-6">{{item.description|slice:0:50}}</div>
         <div *ngIf="isTabSelected(2)">Not Yet</div>
-        <div *ngIf="isTabSelected(3)">None Yet</div>
+        <div *ngIf="isTabSelected(3)">
+            <app-review *ngFor="let rev of reviews" [value]="rev">
+            </app-review>
+        </div>
     </div>
 </div>

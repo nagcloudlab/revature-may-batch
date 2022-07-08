@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item-list',
@@ -12,18 +12,30 @@ export class ItemListComponent implements OnInit {
     {
       name: "VEG",
       price: 100.00,
+      currencyCode: 'USD',
       description: 'Veg is always yummy',
       isAvailable: true,
-      imgPath: "assets/veg.png"
+      imgPath: "assets/veg.png",
+      makeDate: Date.now()
     },
     {
       name: "Non-VEG",
       price: 200.00,
+      offPrice: 10,
       description: 'Non-veg is not always yummy',
-      isAvailable: false,
-      imgPath: "assets/non-veg.jpg"
+      isAvailable: true,
+      imgPath: "assets/non-veg.jpg",
+      makeDate: Date.now()
     },
   ]
+
+
+  @Output()
+  buy = new EventEmitter()
+
+  handleBuy(event: any) {
+    this.buy.emit(event)
+  }
 
 
   constructor() { }
