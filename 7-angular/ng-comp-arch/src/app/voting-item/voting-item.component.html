@@ -1,0 +1,13 @@
+<div class="card card-body">
+
+    <div class="d-flex">
+        <div class="display-4">{{value}}</div>
+        <span class="">{{likes}}</span>
+    </div>
+
+    <div class="mt-2 d-flex justify-content-around">
+        <button (click)="doVote(1)" class="btn btn-success">+</button>
+        <button (click)="doVote(-1)" class="btn btn-danger">-</button>
+    </div>
+
+</div>

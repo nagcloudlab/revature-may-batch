@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = "FTGO"
-
   items = [
     {
       name: "VEG",
@@ -25,7 +24,6 @@ export class AppComponent {
       imgPath: "assets/non-veg.jpg"
     },
   ]
-
   currentTab = 1
 
   handleTabChange(event: Event, tabIndex: number) {
