@@ -8,6 +8,7 @@ import { ItemComponent } from './item/item.component';
 import { CartBadgeComponent } from './cart-badge/cart-badge.component';
 import { ReviewComponent } from './review/review.component';
 import { DiscountPipe } from './discount.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DiscountPipe } from './discount.pipe';
     ItemComponent,
     CartBadgeComponent,
     ReviewComponent,
-    DiscountPipe
+    DiscountPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule

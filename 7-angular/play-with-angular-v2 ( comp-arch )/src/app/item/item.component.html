@@ -4,9 +4,11 @@
     </div>
     <div class="col-9">
         <!-- {{item|json}} -->
-        <div class="display-4">{{item.name}}</div><small>{{item.makeDate | date:'dd-MMM-yyyy: hh:mm:ss'}}</small>
-        <div class="display-5">{{item.price | discount:item.offPrice | currency : item.currencyCode}}</div>
-        <button (click)="handleBuy()" [disabled]="!item.isAvailable" class="btn btn-primary">Buy</button>
+        <div appHighlight>
+            <div class="display-4">{{item.name}}</div><small>{{item.makeDate | date:'dd-MMM-yyyy: hh:mm:ss'}}</small>
+            <div class="display-5">{{item.price | discount:item.offPrice | currency : item.currencyCode}}</div>
+            <button (click)="handleBuy()" [disabled]="!item.isAvailable" class="btn btn-primary">Buy</button>
+        </div>
         <ul class="mt-2 nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link" [class.active]="isTabSelected(1)" (click)="handleTabChange($event,1)"
