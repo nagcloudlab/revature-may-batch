@@ -1,0 +1,15 @@
+<div class="container">
+  <app-header [title]="title"></app-header>
+  <app-cart-badge></app-cart-badge>
+  <hr/>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" (click)="toggleCart()" href="#">View {{isCartOpen?'Items':'Cart'}}</a>
+    </li>
+  </ul>
+  <hr/>
+
+  <app-item-list *ngIf="!isCartOpen"></app-item-list>
+  <app-cart-view *ngIf="isCartOpen"></app-cart-view>
+
+</div>
