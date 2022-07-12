@@ -10,6 +10,7 @@ import { ReviewComponent } from './review/review.component';
 import { DiscountPipe } from './discount.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CartViewComponent } from './cart-view/cart-view.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CartViewComponent } from './cart-view/cart-view.component';
     ReviewComponent,
     DiscountPipe,
     HighlightDirective,
-    CartViewComponent
+    CartViewComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule

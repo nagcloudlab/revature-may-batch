@@ -10,6 +10,14 @@ import { ReviewComponent } from './review/review.component';
 import { DiscountPipe } from './discount.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CartViewComponent } from './cart-view/cart-view.component';
+import {RouterModule, Routes} from "@angular/router";
+import { HomeComponent } from './home/home.component';
+
+const routes:Routes=[
+  {path:'',component:HomeComponent,pathMatch:'full'},
+  {path:'items',component:ItemListComponent},
+  {path:'cart',component:CartViewComponent}
+]
 
 @NgModule({
   declarations: [
@@ -21,10 +29,12 @@ import { CartViewComponent } from './cart-view/cart-view.component';
     ReviewComponent,
     DiscountPipe,
     HighlightDirective,
-    CartViewComponent
+    CartViewComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

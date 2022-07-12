@@ -1,0 +1,5 @@
+<div class="list-group">
+    <div *ngFor="let item of items | slice:0:10" class="list-group-item">
+        <app-item [value]="item"></app-item>
+    </div>
+</div>

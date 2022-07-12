@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card card-body">
+      <form [formGroup]="customerForm" #form="ngForm" (submit)="handleForm($event)">
+        <div class="form-group">
+          <label>Name</label>
+          <input autofocus formControlName="name" type="text" class="form-control"/>
+          <div class="text-danger">
+            <div
+              *ngIf="customerForm.controls['name'].invalid && customerForm.controls['name'].touched">
+              Name is Required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input formControlName="email" type="text" class="form-control"/>
+          <div class="text-danger">
+            <div
+              *ngIf="customerForm.controls['email'].invalid && customerForm.controls['email'].touched">
+              <div *ngIf="customerForm.controls['email'].errors?.required">
+                Email is Required
+              </div>
+              <div *ngIf="customerForm.controls['email'].errors?.email">
+                Invalid Email
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mobile</label>
+          <input formControlName="mobile" type="text" class="form-control"/>
+          <div class="text-danger" *ngIf="customerForm.controls['mobile'].touched">
+            {{errors['mobile']}}
+          </div>
+        </div>
+        <br/>
+        <button class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+<hr/>
+<div>Form Model</div>
+<pre>
+  {{customerForm.value | json}}
+</pre>
+<hr/>
+<div>Form Control ( Email )</div>
+<pre>
+  is pristine  : {{customerForm.controls['email'].pristine}}
+  is dirty     : {{customerForm.controls['email'].dirty}}
+
+  is untouched : {{customerForm.controls['email'].untouched}}
+  is touched   : {{customerForm.controls['email'].touched}}
+
+  is invalid   : {{customerForm.controls['email'].invalid}}
+  is valid     : {{customerForm.controls['email'].valid}}
+</pre>
+<hr/>
+<div>Form Group</div>
+<pre>
+  is pristine  : {{customerForm.pristine}}
+  is dirty     : {{customerForm.dirty}}
+
+  is untouched : {{customerForm.untouched}}
+  is touched   : {{customerForm.touched}}
+
+  is invalid   : {{customerForm.invalid}}
+  is valid     : {{customerForm.valid}}
+
+  is submitted : {{form.submitted}}
+</pre>
+<hr/>
+

@@ -33,6 +33,7 @@ export class ItemComponent implements OnInit {
   }
 
   handleTabChange(event: Event, tabIndex: number) {
+    event.preventDefault()
     this.currentTab = tabIndex
     if(this.currentTab===3){
       this.reviews=this.itemService.getReviews(this.item.id)
