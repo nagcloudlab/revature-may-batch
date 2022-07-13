@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="display-1">ng http</div>
+  <hr/>
+
+  <app-new-todo></app-new-todo>
+
+  <hr/>
+  <div class="d-flex justify-content-between">
+<!--    <button (click)="handleTopFiveTodos()" class="btn btn-primary"> Load top 5 todos</button>-->
+<!--    <form [formGroup]="fg">-->
+<!--      <input type="number" formControlName="limit" />-->
+<!--      <select formControlName="limit">-->
+<!--        <option value="">-select-limit-</option>-->
+<!--        <option *ngFor="let limit of [5,10,50,100,150,200]">-->
+<!--          {{limit}}-->
+<!--        </option>-->
+<!--      </select>-->
+<!--    </form>-->
+  </div>
+  <hr/>
+
+  <table class="table table-striped table-bordered">
+    <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+      <td>{{todo.type}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
