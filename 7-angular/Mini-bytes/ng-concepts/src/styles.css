@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../node_modules/primeicons/primeicons.css');
+@import url('../node_modules/primeng/resources/themes/lara-light-blue/theme.css');
+@import url('../node_modules/primeng/resources/primeng.min.css');
+
+
+
+.bg-color{
+  background-color: tomato;
+}
