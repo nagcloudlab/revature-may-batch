@@ -1,0 +1,25 @@
+
+<div class="card">
+  <div class="card-header">Item's in cart</div>
+  <div class="card-body">
+    <div *ngIf="isCartEmpty">No Items in cart</div>
+    <table class="table table-striped" *ngIf="!isCartEmpty">
+      <thead>
+        <th>S-No</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of cart | keyvalue;let idx=index">
+          <td>{{idx+1}}</td>
+          <td>{{line.value?.item?.name}}</td>
+          <td>{{line.value.item.price | discount:line.value.item.offPrice | currency}}</td>
+          <td>{{line.value.qty}}</td>
+          <td>{{line.value.qty*line.value.item.price | discount:line.value.item.offPrice|currency}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
