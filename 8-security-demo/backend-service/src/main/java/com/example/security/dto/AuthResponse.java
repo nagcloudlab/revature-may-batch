@@ -1,4 +1,4 @@
-package com.example.auth.dto;
+package com.example.security.dto;
 
 public class AuthResponse {
     private String message;

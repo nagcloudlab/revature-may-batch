@@ -1,7 +1,7 @@
-package com.example.auth;
+package com.example.security;
 
-import com.example.auth.dto.AuthRequest;
-import com.example.auth.dto.AuthResponse;
+import com.example.security.dto.AuthRequest;
+import com.example.security.dto.AuthResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
