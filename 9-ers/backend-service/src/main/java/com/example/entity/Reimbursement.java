@@ -20,7 +20,6 @@ public class Reimbursement {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateTime;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;

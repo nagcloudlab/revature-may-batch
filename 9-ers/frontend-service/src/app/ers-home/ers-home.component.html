@@ -1,0 +1,20 @@
+
+
+
+
+<div class="row">
+  <div class="col-4">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a [routerLink]="['new']" class="btn btn-link">New Request</a>
+      </li>
+      <li class="list-group-item">
+        <a [routerLink]="['view']" class="btn btn-link">View Requests</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

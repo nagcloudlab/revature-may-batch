@@ -11,15 +11,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Transactional
 public class ReimbursementService {
 
     private final UserRepository userRepository;
     private final ReimbursementRepository reimbursementRepository;
 
-    @Transactional
+
     public Reimbursement create(String empId, ReimbursementRequest request) {
         User user = userRepository.findByEmpId(empId);
         Reimbursement reimbursement = new Reimbursement();
@@ -28,7 +30,17 @@ public class ReimbursementService {
         reimbursement.setDateTime(new Date());
         reimbursement.setUser(user);
         return reimbursementRepository.save(reimbursement);
-
     }
+
+    public List<Reimbursement> getAll() {
+        return reimbursementRepository.findAll();
+    }
+
+    public List<Reimbursement> getRequestsByEmpId(String empId) {
+        return reimbursementRepository.findRequestsByEmpId(empId);
+    }
+
+
+
 
 }

@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="display-1">ERS</div>
+  <hr/>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['ers']">Ers</a>
+    </li>
+    <li class="nav-item" *ngIf="!isLoggedIn">
+      <a class="nav-link" [routerLink]="['login']">Login</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a class="nav-link" href (click)="handleLogout()">Logout</a>
+    </li>
+  </ul>
+
+  <hr/>
+  <div *ngIf="isLoggedIn">
+    Welcome : {{userDetails.name}},
+    Role    : <span *ngFor="let role of userDetails.roles">{{role.name}}&nbsp;</span>
+  </div>
+  <hr/>
+
+  <router-outlet></router-outlet>
+
+</div>

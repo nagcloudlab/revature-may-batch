@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class User {
     private int id;
     @Column(unique = true)
     private String empId;
+    @JsonIgnore
     private String password;
     private String name;
     @Column(unique = true)

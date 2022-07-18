@@ -1,0 +1,15 @@
+<table class="table table-striped table-bordered">
+  <tbody>
+  <tr *ngFor="let request of requests">
+    <td>{{request.id}}</td>
+    <td>{{request.user.name}}</td>
+    <td>{{request.dateTime|date:'MM / dd / yyyy hh:mm:ss'}}</td>
+    <td>{{request.amount|currency}}</td>
+    <td>{{request.status}}</td>
+    <td *ngIf="isManager && request.status==='PENDING'" >
+      <button (click)="handleStatus(request.id,'APPROVED')" type="button" class="btn btn-success">Approve</button>
+      <button (click)="handleStatus(request.id,'DENIED')" type="button" class="btn btn-danger">Deny</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
