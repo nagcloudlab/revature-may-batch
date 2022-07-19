@@ -49,5 +49,15 @@ export class CustomerFormComponent implements OnInit {
     }
   }
 
+  loadCustomer(){
+    // get customer details from service if logged-in
+    // get making api calls
+    let customerData={
+      name:"gene",
+      email:"gene@mail.com"
+    }
+    this.customerForm.patchValue(customerData)
+  }
+
 
 }
