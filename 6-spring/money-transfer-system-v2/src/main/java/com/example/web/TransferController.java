@@ -26,12 +26,12 @@ public class TransferController {
             @RequestParam String targetAccountNumber
     ) {
         ModelAndView mav = new ModelAndView();
-        try {
-            transferService.transfer(amount, sourceAccountNumber, targetAccountNumber);
-            mav.addObject("message", "transfer successfully");
-        } catch (Exception e) {
-            mav.addObject("message", e.getMessage());
-        }
+//        try {
+        transferService.transfer(amount, sourceAccountNumber, targetAccountNumber);
+        mav.addObject("message", "transfer successfully");
+//        } catch (Exception e) {
+//            mav.addObject("message", e.getMessage());
+//        }
         mav.setViewName("txr-status");
         return mav;
     }

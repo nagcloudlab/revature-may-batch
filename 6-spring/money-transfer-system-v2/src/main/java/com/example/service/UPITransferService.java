@@ -19,14 +19,8 @@ public class UPITransferService implements TransferService {
         this.accountRepository = accountRepository;
     }
 
+    @Transactional
     @Override
-    @Transactional(
-            transactionManager = "transactionManager",
-            isolation = Isolation.READ_COMMITTED,
-            propagation = Propagation.REQUIRED,
-            rollbackFor = {AccountBalanceException.class,IllegalStateException.class},
-            noRollbackFor = {RuntimeException.class}
-    )
     public void transfer(double amount, String sourceAccountNumber, String targetAccountNumber) {
         //logger.info("transfer initiated..");
         Account sourceAccount = accountRepository.findById(sourceAccountNumber).get();
@@ -35,7 +29,13 @@ public class UPITransferService implements TransferService {
             throw new AccountBalanceException("no balance");
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         targetAccount.setBalance(targetAccount.getBalance() + amount);
+
         accountRepository.save(sourceAccount);
+
+        if(true){
+            throw new IllegalStateException("oops");
+        }
+
         accountRepository.save(targetAccount);
     }
 

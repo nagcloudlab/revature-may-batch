@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories
 @EnableAutoConfiguration
 @EnableAspectJAutoProxy
-@EnableTransactionManagement
+//@EnableTransactionManagement
 @ComponentScan(basePackages = {"com.example"})
 public class Application {
     public static void main(String[] args) {
