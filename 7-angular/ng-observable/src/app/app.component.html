@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="display-1">ng observables</div>
+  <hr/>
+
+  <div class="card card-body">
+    <app-alert></app-alert>
+  </div>
+
+  <hr/>
+
+  <button (click)="handleLoadTodos()" class="btn btn-success">Load Todos</button>
+
+  <hr/>
+  <table class="table table-striped">
+    <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+</div>
